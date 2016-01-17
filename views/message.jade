@@ -1,0 +1,10 @@
+extends ./layouts/singlecolumn
+block content-body
+  script.
+    setTimeout(function () {
+      window.location = "#{location}"
+    },3000);
+  .alert.alert-success
+    H1!= message
+    
+  h6 This page will redirect in 3sec. If not click here #[a(href="#{location}") Click here] 

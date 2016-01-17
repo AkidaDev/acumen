@@ -1,0 +1,45 @@
+extends ./../layouts/plain.jade
+block content-body
+  body.hold-transition.register-page
+    .register-box
+      .register-logo
+        a(href='../../index2.html')
+          b Admin
+          | LTE
+      .register-box-body
+        p.login-box-msg Register a new membership
+        form(action='../../index.html', method='post')
+          .form-group.has-feedback
+            input.form-control(type='text', placeholder='Full name')
+            span.glyphicon.glyphicon-user.form-control-feedback
+          .form-group.has-feedback
+            input.form-control(type='email', placeholder='Email')
+            span.glyphicon.glyphicon-envelope.form-control-feedback
+          .form-group.has-feedback
+            input.form-control(type='password', placeholder='Password')
+            span.glyphicon.glyphicon-lock.form-control-feedback
+          .form-group.has-feedback
+            input.form-control(type='password', placeholder='Retype password')
+            span.glyphicon.glyphicon-log-in.form-control-feedback
+          .row
+            .col-xs-8
+              .checkbox.icheck
+                label
+                  input(type='checkbox')
+                  |  I agree to the 
+                  a(href='#') terms
+            // /.col
+            .col-xs-4
+              button.btn.btn-primary.btn-block.btn-flat(type='submit') Register
+            // /.col
+        .social-auth-links.text-center
+          p - OR -
+          a.btn.btn-block.btn-social.btn-facebook.btn-flat(href='#')
+            i.fa.fa-facebook
+            |  Sign up using Facebook
+          a.btn.btn-block.btn-social.btn-google.btn-flat(href='#')
+            i.fa.fa-google-plus
+            |  Sign up using Google+
+        a.text-center(href='login.html') I already have a membership
+      // /.form-box
+    // /.register-box

@@ -1,0 +1,21 @@
+extends ./../layouts/singlecolumn
+block  content-body
+  h1 Add new Product
+  form.form-inline(method="POST" action="/product/add")
+    .form-group
+      label.bfont(style=" font-size:  25px;") Product Name
+      input.form-control(type="text" placeholder="Product Name" name="Product[name]" value="hey")
+    .form-group
+      label Product SKU
+      input.form-control(type="text" placeholder="Product SKU" name="Product[sku]")
+    .form-group
+      label Status
+      select.form-control(name="Product[status]")
+        option(value="") 
+        option(value="true") True
+        option(value="false") False
+    .form-group
+      button(class="add_att") Add Attributes
+      .att_fields_wrap
+    .form-group
+     input.btn.btn-inverse(type="submit" value="Add Product")

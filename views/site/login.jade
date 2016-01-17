@@ -1,0 +1,43 @@
+extends ./../layouts/plain.jade
+block content-body
+  body.hold-transition.login-page
+    .login-box
+      .login-logo
+        a(href='../../index2.html')
+          b Admin
+          | LTE
+      // /.login-logo
+      .login-box-body
+        p.login-box-msg Sign in to start your session
+        form(action='/login', method='post')
+          .form-group.has-feedback(class= typeofrerr==="undefined" ? "" : "has-error")
+            input.form-control(type='email', placeholder='Email' name="Login[email]")
+            span.glyphicon.glyphicon-envelope.form-control-feedback
+          .form-group.has-feedback(class= typeof err==="undefined" ? "" : "has-error")
+            input.form-control(type='password', placeholder='Password' name="Login[password]")
+            span.glyphicon.glyphicon-lock.form-control-feedback
+          if err
+            .row
+              span(id="helpBlock2" class="help-block") Email or Password incorrect
+          .row
+            .col-xs-8
+              .checkbox.icheck
+                label
+                  input(type='checkbox' name="Login[remeber]")
+                  |   Remember Me
+            // /.col
+            .col-xs-4
+              button.btn.btn-primary.btn-block.btn-flat(type='submit') Sign In
+            // /.col
+        .social-auth-links.text-center
+          p - OR -
+          a.btn.btn-block.btn-social.btn-facebook.btn-flat(href='#')
+            i.fa.fa-facebook
+            |  Sign in using Facebook
+          a.btn.btn-block.btn-social.btn-google.btn-flat(href='#')
+            i.fa.fa-google-plus
+            |  Sign in using Google+
+        // /.social-auth-links
+        a(href='#') I forgot my password
+        br
+        a.text-center(href='/register') Register a new membership

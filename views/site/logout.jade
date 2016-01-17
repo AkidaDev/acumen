@@ -1,0 +1,35 @@
+extends ./../layouts/plain.jade
+block content-body
+  body.hold-transition.lockscreen
+    .lockscreen-wrapper
+      .lockscreen-logo
+        a(href='../../index2.html')
+          b Admin
+          | LTE
+      // User name
+      .lockscreen-name John Doe
+      // START LOCK SCREEN ITEM
+      .lockscreen-item
+        // lockscreen image
+        .lockscreen-image
+          img(src='./img/user1-128x128.jpg', alt='User Image')
+        // /.lockscreen-image
+        // lockscreen credentials (contains the form)
+        form.lockscreen-credentials
+          .input-group
+            input.form-control(type='password', placeholder='password')
+            .input-group-btn
+              button.btn
+                i.fa.fa-arrow-right.text-muted
+        // /.lockscreen credentials
+      // /.lockscreen-item
+      .help-block.text-center
+        | Enter your password to retrieve your session
+      .text-center
+        a(href='/login') Or sign in as a different user
+      .lockscreen-footer.text-center
+        | Copyright © 2014-2015 
+        b
+          a.text-black(href='http://almsaeedstudio.com') Almsaeed Studio
+        br
+        |         All rights reserved
