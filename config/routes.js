@@ -47,7 +47,8 @@ module.exports.routes = {
   '/mailbox/read':{ view: 'adminpanel/mailbox/read' },
   '/login':{view: 'site/login'},
   '/logout':{view: 'site/logout'},
-  '/register':{view: 'site/register'} 
+  '/register':{view: 'site/register'},
+  '/user-detail':{view: 'adminpanel/user/user-detail'} 
   //'/':{ view },
   //'/':{ view },
 
