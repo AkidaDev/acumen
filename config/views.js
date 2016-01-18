@@ -76,7 +76,7 @@ module.exports.views = {
   ****************************************************************************/
 
   layout: 'layouts/main',
-
+  pretty: true,
   /****************************************************************************
   *                                                                           *
   * Partials are simply top-level snippets you can leverage to reuse template *
@@ -90,6 +90,5 @@ module.exports.views = {
   ****************************************************************************/
 
   partials: false
-
 
 };

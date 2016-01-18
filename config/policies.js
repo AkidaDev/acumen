@@ -16,7 +16,7 @@
  * http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.policies.html
  */
 
-
+var passport = require('passport');
 module.exports.policies = {
 
   /***************************************************************************
@@ -48,4 +48,9 @@ module.exports.policies = {
 		// before letting any users feed our rabbits
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
+  '*': [
+        passport.initialize(),
+        // Use Passport's built-in sessions
+        passport.session()
+  ]
 };

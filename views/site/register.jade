@@ -3,31 +3,35 @@ block content-body
   body.hold-transition.register-page
     .register-box
       .register-logo
-        a(href='../../index2.html')
+        a(href='/')
           b Admin
           | LTE
       .register-box-body
         p.login-box-msg Register a new membership
-        form(action='../../index.html', method='post')
+        form(action='/panel/register', method='post')
           .form-group.has-feedback
-            input.form-control(type='text', placeholder='Full name')
+            input(type="hidden" name="_csrf" value=_csrf)
+            input.form-control(type='text' name="Register[name]" placeholder='Full name' value="#{hj}")
             span.glyphicon.glyphicon-user.form-control-feedback
           .form-group.has-feedback
-            input.form-control(type='email', placeholder='Email')
+            input.form-control(type='text' name="Register[username]" placeholder='Username')
+            span.glyphicon.glyphicon-user.form-control-feedback
+          .form-group.has-feedback
+            input.form-control(type='email' name="Register[email]" placeholder='Email')
             span.glyphicon.glyphicon-envelope.form-control-feedback
           .form-group.has-feedback
-            input.form-control(type='password', placeholder='Password')
+            input.form-control(type='password' name="Register[password]" placeholder='Password')
             span.glyphicon.glyphicon-lock.form-control-feedback
           .form-group.has-feedback
-            input.form-control(type='password', placeholder='Retype password')
-            span.glyphicon.glyphicon-log-in.form-control-feedback
+            input.form-control(type='password' name="Register[repassword]" placeholder='Retype password')
+            span.glyphicon.glyphicon-lock.form-control-feedback
           .row
             .col-xs-8
               .checkbox.icheck
                 label
                   input(type='checkbox')
                   |  I agree to the 
-                  a(href='#') terms
+                  a(href='/todo?page=terms') terms
             // /.col
             .col-xs-4
               button.btn.btn-primary.btn-block.btn-flat(type='submit') Register

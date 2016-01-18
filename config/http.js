@@ -8,7 +8,8 @@
  * For more information on configuration, check out:
  * http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.http.html
  */
-
+var passport = require('passport'),
+LocalStrategy = require('passport-local').Strategy;
 module.exports.http = {
 
   /****************************************************************************
@@ -72,7 +73,9 @@ module.exports.http = {
     // bodyParser: require('skipper')
 
   // },
-
+  customMiddleware: function (app) {
+  app.locals.pretty = true; //TODO: remove in production
+}
   /***************************************************************************
   *                                                                          *
   * The number of seconds to cache flat files on disk being served by        *

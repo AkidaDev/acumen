@@ -1,20 +1,23 @@
 extends ./../layouts/plain.jade
+var title= "Login"
 block content-body
   body.hold-transition.login-page
     .login-box
       .login-logo
-        a(href='../../index2.html')
+        a(href='/')
           b Admin
           | LTE
       // /.login-logo
+      // TODO: UPDATE ME FOR PRODUCTION
       .login-box-body
         p.login-box-msg Sign in to start your session
-        form(action='/login', method='post')
-          .form-group.has-feedback(class= typeofrerr==="undefined" ? "" : "has-error")
-            input.form-control(type='email', placeholder='Email' name="Login[email]")
+        form(action='/panel/login', method='post') 
+          .form-group.has-feedback(class= typeof err==="undefined" ? "" : "has-error")
+            input(type="hidden" name="_csrf" value=_csrf)
+            input.form-control(type='text', placeholder='Username' name="username")
             span.glyphicon.glyphicon-envelope.form-control-feedback
           .form-group.has-feedback(class= typeof err==="undefined" ? "" : "has-error")
-            input.form-control(type='password', placeholder='Password' name="Login[password]")
+            input.form-control(type='password', placeholder='Password' name="password")
             span.glyphicon.glyphicon-lock.form-control-feedback
           if err
             .row
