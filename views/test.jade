@@ -1,0 +1,17 @@
+// this is test file for testing and debuing 
+
+extends ./layouts/plain
+// current testing chat system for user
+block content-body
+  body
+      script(src="/js/dependencies/sails.io.js")
+      script.
+        io.socket.on('connect',function(){
+          io.socket.request({method: 'get',url: '/chat/find',params: {}, headers: {}}, function(data,jwr){
+            console.log("hey chat got update");
+          });
+          io.socket.on('chat',function (message) {
+            console.log('chat created'+ message);
+          })
+        });
+      

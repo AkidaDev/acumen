@@ -6,16 +6,14 @@
  */
 
 module.exports = {
-	
-
-
-  /**
+	  /**
    * `ChatController.index()`
    */
   index: function (req, res) {
-    return res.json({
-      todo: 'index() is not implemented yet!'
-    });
+    return res.render('test');
+  },
+  test: function (req,res) {
+    sails.sockets.broadcast('message', { msg: 'Hi there!' });
+  //  res.render('te')
   }
 };
-
