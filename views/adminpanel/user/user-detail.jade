@@ -1,0 +1,503 @@
+extends ./../../layouts/main
+block content-body
+  // Content Wrapper. Contains page content
+  .content-wrapper
+    // Content Header (Page header)
+    section.content-header
+      h1
+        | Alexendar
+        small Details
+      ol.breadcrumb
+        li
+          a(href='/')
+            li
+              a(href='/')
+                i.fa.fa-dashboard
+                |  Home
+            li
+              a(href='/user') Manage Users
+            li.active User Details
+    // Main content
+    section.content
+      // Your Page Content Here
+      .row
+        .col-md-4
+          // Widget: user widget style 1
+          .box.box-widget.widget-user
+            // Add the bg color to the header using any of the bg-* classes
+            .widget-user-header.bg-navy
+              h3.widget-user-username Nadia Carmichael
+              h5.widget-user-desc Lead Developer
+            .widget-user-image
+              img.img-circle(src='/img/user7-128x128.jpg', alt='User Avatar')
+            // /.widget-user-image
+            .box-footer
+              ul.nav.nav-stacked
+                li
+                  a(href='#')
+                    | Projects 
+                    span.pull-right.badge.bg-blue 31
+                li
+                  a(href='#')
+                    | Tasks 
+                    span.pull-right.badge.bg-aqua 5
+                li
+                  a(href='#')
+                    | Completed Projects 
+                    span.pull-right.badge.bg-green 12
+                li
+                  a(href='#')
+                    | Followers 
+                    span.pull-right.badge.bg-red 842
+                li
+                  a(href='#')
+                    | Followers 
+                    span.pull-right.badge.bg-red 842
+          // /.widget-user
+        // /.col
+        .col-md-8
+          // TO DO List
+          .box.box-primary
+            .box-header
+              i.ion.ion-clipboard
+              h3.box-title To Do List
+              .box-tools.pull-right
+                ul.pagination.pagination-sm.inline
+                  li
+                    a(href='#') «
+                  li
+                    a(href='#') 1
+                  li
+                    a(href='#') 2
+                  li
+                    a(href='#') 3
+                  li
+                    a(href='#') »
+            // /.box-header
+            .box-body
+              ul.todo-list
+                li
+                  // drag handle
+                  span
+                    i.fa.fa-ellipsis-v
+                    i.fa.fa-ellipsis-v
+                  // checkbox
+                  input(type='checkbox', value='', name='')
+                  // todo text
+                  span.text Design a nice theme
+                  // Emphasis label
+                  small.label.label-danger
+                    i.fa.fa-clock-o
+                    |  2 mins
+                  // General tools such as edit or delete
+                  .tools
+                    i.fa.fa-edit
+                    i.fa.fa-trash-o
+                li
+                  span
+                    i.fa.fa-ellipsis-v
+                    i.fa.fa-ellipsis-v
+                  input(type='checkbox', value='', name='')
+                  span.text Make the theme responsive
+                  small.label.label-info
+                    i.fa.fa-clock-o
+                    |  4 hours
+                  .tools
+                    i.fa.fa-edit
+                    i.fa.fa-trash-o
+                li
+                  span
+                    i.fa.fa-ellipsis-v
+                    i.fa.fa-ellipsis-v
+                  input(type='checkbox', value='', name='')
+                  span.text Let theme shine like a star
+                  small.label.label-warning
+                    i.fa.fa-clock-o
+                    |  1 day
+                  .tools
+                    i.fa.fa-edit
+                    i.fa.fa-trash-o
+                li
+                  span
+                    i.fa.fa-ellipsis-v
+                    i.fa.fa-ellipsis-v
+                  input(type='checkbox', value='', name='')
+                  span.text Let theme shine like a star
+                  small.label.label-success
+                    i.fa.fa-clock-o
+                    |  3 days
+                  .tools
+                    i.fa.fa-edit
+                    i.fa.fa-trash-o
+                li
+                  span
+                    i.fa.fa-ellipsis-v
+                    i.fa.fa-ellipsis-v
+                  input(type='checkbox', value='', name='')
+                  span.text Check your messages and notifications
+                  small.label.label-primary
+                    i.fa.fa-clock-o
+                    |  1 week
+                  .tools
+                    i.fa.fa-edit
+                    i.fa.fa-trash-o
+                li
+                  span
+                    i.fa.fa-ellipsis-v
+                    i.fa.fa-ellipsis-v
+                  input(type='checkbox', value='', name='')
+                  span.text Let theme shine like a star
+                  small.label.label-default
+                    i.fa.fa-clock-o
+                    |  1 month
+                  .tools
+                    i.fa.fa-edit
+                    i.fa.fa-trash-o
+            // /.box-body
+            .box-footer.clearfix.no-border
+              button.btn.btn-default.pull-right
+                i.fa.fa-plus
+                |  Add item
+          // /.box
+      .row
+        .col-md-12
+          .box.box-primary
+            .box-header.with-border
+              h3.box-title Monthly Recap Report
+              .box-tools.pull-right
+                button.btn.btn-box-tool(data-widget='collapse')
+                  i.fa.fa-minus
+                .btn-group
+                  button.btn.btn-box-tool.dropdown-toggle(data-toggle='dropdown')
+                    i.fa.fa-wrench
+                  ul.dropdown-menu(role='menu')
+                    li
+                      a(href='#') Action
+                    li
+                      a(href='#') Another action
+                    li
+                      a(href='#') Something else here
+                    li.divider
+                    li
+                      a(href='#') Separated link
+                button.btn.btn-box-tool(data-widget='remove')
+                  i.fa.fa-times
+            // /.box-header
+            .box-body
+              .row
+                .col-md-8
+                  p.text-center
+                    strong Sales: 1 Jan, 2014 - 30 Jul, 2014
+                  .chart
+                    canvas#canvas(style='height: 520px;')
+                  // /.chart-responsive
+                // /.col
+                .col-md-4
+                  p.text-center
+                    strong Goal Completion
+                  .progress-group
+                    span.progress-text Add Products to Cart
+                    span.progress-number
+                      b 160
+                      | /200
+                    .progress.progress-xs.active
+                      .progress-bar.progress-bar-aqua.progress-bar-striped(style='width: 80%')
+                  // /.progress-group
+                  .progress-group
+                    span.progress-text Complete Purchase
+                    span.progress-number
+                      b 310
+                      | /400
+                    .progress.progress-xs.active
+                      .progress-bar.progress-bar-red.progress-bar-striped(style='width: 80%')
+                  // /.progress-group
+                  .progress-group
+                    span.progress-text Visit Premium Page
+                    span.progress-number
+                      b 480
+                      | /800
+                    .progress.progress-xs.active
+                      .progress-bar.progress-bar-green.progress-bar-striped(style='width: 80%')
+                  // /.progress-group
+                  .progress-group
+                    span.progress-text Send Inquiries
+                    span.progress-number
+                      b 250
+                      | /500
+                    .progress.progress-xs.active
+                      .progress-bar.progress-bar-yellow.progress-bar-striped(style='width: 80%')
+                  // /.progress-group
+                // /.col
+              // /.row
+            // ./box-body
+            .box-footer
+              .row
+                .col-sm-3.col-xs-6
+                  .description-block.border-right
+                    span.description-percentage.text-green
+                      i.fa.fa-caret-up
+                      |  17%
+                    h5.description-header $35,210.43
+                    span.description-text TOTAL REVENUE
+                  // /.description-block
+                // /.col
+                .col-sm-3.col-xs-6
+                  .description-block.border-right
+                    span.description-percentage.text-yellow
+                      i.fa.fa-caret-left
+                      |  0%
+                    h5.description-header $10,390.90
+                    span.description-text TOTAL COST
+                  // /.description-block
+                // /.col
+                .col-sm-3.col-xs-6
+                  .description-block.border-right
+                    span.description-percentage.text-green
+                      i.fa.fa-caret-up
+                      |  20%
+                    h5.description-header $24,813.53
+                    span.description-text TOTAL PROFIT
+                  // /.description-block
+                // /.col
+                .col-sm-3.col-xs-6
+                  .description-block
+                    span.description-percentage.text-red
+                      i.fa.fa-caret-down
+                      |  18%
+                    h5.description-header 1200
+                    span.description-text GOAL COMPLETIONS
+                  // /.description-block
+              // /.row
+            // /.box-footer
+          // /.box
+        // /.col
+      // /.row
+      .row
+        .col-md-6
+          .box.box-primary
+            .box-header
+              h3.box-title Working On
+            // /.box-header
+            .box-body.table-responsive.no-padding
+              table.table.table-hover
+                tr
+                  th(style='width: 10px') #
+                  th Task
+                  th Progress
+                  th(style='width: 40px') Label
+                tr
+                  td 1.
+                  td Update software
+                  td
+                    .progress.progress-xs
+                      .progress-bar.progress-bar-danger.progress-striped(style='width: 55%')
+                  td
+                    span.badge.bg-red 55%
+                tr
+                  td 2.
+                  td Clean database
+                  td
+                    .progress.progress-xs
+                      .progress-bar.progress-bar-yellow.progress-striped(style='width: 70%')
+                  td
+                    span.badge.bg-yellow 70%
+                tr
+                  td 3.
+                  td Cron job running
+                  td
+                    .progress.progress-xs.progress-striped.active
+                      .progress-bar.progress-bar-primary(style='width: 30%')
+                  td
+                    span.badge.bg-light-blue 30%
+                tr
+                  td 4.
+                  td Fix and squish bugs
+                  td
+                    .progress.progress-xs.progress-striped.active
+                      .progress-bar.progress-bar-success(style='width: 90%')
+                  td
+                    span.badge.bg-green 90%
+            // /.box-body
+          .box.box-primary
+            .box-header.with-border
+              h3.box-title Ongoing Projects
+            // /.box-header
+            .box-body
+              table.table.table-hover
+                tr
+                  th(style='width: 20px') ID
+                  th Projects
+                  th Team
+                  th(style='width: 20px') Details
+                tr
+                  td(style='vertical-align:middle') 186
+                  td(style='vertical-align:middle') Update software
+                  td
+                    img.direct-chat-img.img-bordered-sm(src='/img/user2-160x160.jpg', alt='User Image')
+                    img.direct-chat-img.img-bordered-sm(src='/img/user7-128x128.jpg', alt='User Image')
+                    img.direct-chat-img.img-bordered-sm(src='/img/user2-160x160.jpg', alt='User Image')
+                    img.direct-chat-img.img-bordered-sm(src='/img/user7-128x128.jpg', alt='User Image')
+                  td(style='vertical-align:middle')
+                    button.btn.btn-primary.btn-xs
+                      i.fa.fa-folder-open
+                      |  View
+                tr
+                  td 289
+                  td Clean database
+                  td 11-Dec-2014
+                  td
+                    button.btn.btn-primary.btn-xs
+                      i.fa.fa-folder-open
+                      |  View
+                tr
+                  td 436
+                  td Cron job running
+                  td 11-Dec-2014
+                  td
+                    button.btn.btn-primary.btn-xs
+                      i.fa.fa-folder-open
+                      |  View
+                tr
+                  td 136
+                  td Fix and squish bugs
+                  td 11-Dec-2014
+                  td
+                    button.btn.btn-primary.btn-xs
+                      i.fa.fa-folder-open
+                      |  View
+            // /.box-body
+          // /.box
+        .col-md-6
+          .box.box-primary
+            .box-header.with-border
+              h3.box-title Completed Projects
+              .box-tools
+                .input-group(style='width: 200px;')
+                  input.form-control.input-sm.pull-right(type='text', name='table_search', placeholder='Search')
+                  .input-group-btn
+                    button.btn.btn-sm.btn-default
+                      i.fa.fa-search
+            // /.box-header
+            .box-body
+              table.table.table-bordered.table-hover
+                tr
+                  th(style='width: 20px') ID
+                  th Projects
+                  th Date
+                  th(style='width: 20px') Details
+                tr
+                  td 186
+                  td Update software
+                  td 11-Dec-2014
+                  td
+                    button.btn.btn-primary.btn-xs
+                      i.fa.fa-folder-open
+                      |  View
+                tr
+                  td 289
+                  td Clean database
+                  td 11-Dec-2014
+                  td
+                    button.btn.btn-primary.btn-xs
+                      i.fa.fa-folder-open
+                      |  View
+                tr
+                  td 436
+                  td Cron job running
+                  td 11-Dec-2014
+                  td
+                    button.btn.btn-primary.btn-xs
+                      i.fa.fa-folder-open
+                      |  View
+                tr
+                  td 136
+                  td Fix and squish bugs
+                  td 11-Dec-2014
+                  td
+                    button.btn.btn-primary.btn-xs
+                      i.fa.fa-folder-open
+                      |  View
+            // /.box-body
+            .box-footer.clearfix
+              ul.pagination.pagination-sm.no-margin.pull-right
+                li
+                  a(href='#') «
+                li
+                  a(href='#') 1
+                li
+                  a(href='#') 2
+                li
+                  a(href='#') 3
+                li
+                  a(href='#') »
+          // /.box
+          // About Me Box
+          .box.box-primary
+            .box-header.with-border
+              h3.box-title Employee Details
+            // /.box-header
+            .box-body
+              .box-body.box-profile
+                img.profile-user-img.img-responsive.img-circle(src='/img/user2-160x160.jpg', alt='User profile picture')
+                h3.profile-username.text-center Nina Mcintire
+                p.text-muted.text-center Software Engineer
+              strong
+                i.fa.fa-book.margin-r-5
+                |   Education
+              p.text-muted
+                | B.S. in Computer Science from the University of Tennessee at Knoxville
+              hr
+              .row
+                .col-sm-4.border-right
+                  .description-block
+                    h5.description-header
+                      strong
+                        i.fa.fa-map-marker.margin-r-5
+                        |  Location
+                    p.text-muted Malibu, California
+                  // /.description-block
+                // /.col
+                .col-sm-4.border-right
+                  .description-block
+                    h5.description-header
+                      strong
+                        i.fa.fa-phone
+                        |  Contact No.
+                    p.text-muted (+91)-847-850-9486
+                  // /.description-block
+                // /.col
+                .col-sm-4
+                  .description-block
+                    h5.description-header
+                      strong
+                        i.fa.fa-envelope
+                        |  Email ID
+                    p.text-muted Superbit@gmail.com
+                  // /.description-block
+                // /.col
+              // /.row
+              hr
+              strong
+                i.fa.fa-pencil.margin-r-5
+                |  Skills
+              p
+                span.label.label-danger UI Design
+                &nbsp;
+                span.label.label-success Coding
+                &nbsp;
+                span.label.label-info Javascript
+                &nbsp;
+                span.label.label-warning PHP
+                &nbsp;
+                span.label.label-primary Node.js
+                &nbsp;
+              hr
+              strong
+                i.fa.fa-file-text-o.margin-r-5
+                |  Notes
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.
+            // /.box-body
+          // /.box
+    // /.content
+  // /.content-wrapper
