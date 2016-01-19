@@ -7,17 +7,14 @@
 
 module.exports = {
   connection: "localMongodb",
-
   attributes: {
-
     name:{type: "string", required: true},
-
     username : { type: 'string', required: true, unique: true },
-
     password : { type: 'string', required: true },
-
     email : { type: 'email', required:true },
-
+    getRole: function (cb){
+      return cb('admin'); //TODO: get real roles in future
+    },
     toJSON: function () {
       var obj = this.toObject();
       delete obj.password;
