@@ -38,7 +38,7 @@ module.exports.routes = {
   '/user':{
     view: 'adminpanel/user'
   },
-  'user/add':{
+  '/user/add':{
     view: 'adminpanel/user/add'
   },
   '/calendar':{ view:'adminpanel/calendar' },
@@ -48,7 +48,8 @@ module.exports.routes = {
   //'/login':{view: 'site/login'}, TODO: complete me for production
   '/logout':{view: 'site/logout'},
   '/register':{view: 'site/register'},
-  '/user-detail':{view: 'adminpanel/user/user-detail'}
+  '/user-detail':{view: 'adminpanel/user/user-detail'},
+  '/project':{view: 'adminpanel/project'}
   //'/':{ view },
   //'/':{ view },
 
