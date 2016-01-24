@@ -1,0 +1,160 @@
+extend ./../layouts/main.jade
+block content-body
+  // Content Wrapper. Contains page content
+  .content-wrapper
+    // Content Header (Page header)
+    section.content-header
+      h1
+        | Preference
+        small Settings
+      ol.breadcrumb
+        li
+          a(href='/')
+            i.fa.fa-dashboard
+            |  Home
+        li.active Preferences
+    // Main content
+    section.content
+      // Custom Tabs
+      .nav-tabs-custom
+        ul.nav.nav-tabs
+          li.active
+            a(href='#tab_1', data-toggle='tab') General
+          li
+            a(href='#tab_2', data-toggle='tab') Email/Calender
+          li
+            a(href='#tab_3', data-toggle='tab') Permission
+          li.dropdown
+            a.dropdown-toggle(data-toggle='dropdown', href='#')
+              | Management 
+              span.caret
+            ul.dropdown-menu
+              li(role='presentation')
+                a(role='menuitem', tabindex='-1', href='#') Action
+              li(role='presentation')
+                a(role='menuitem', tabindex='-1', href='#') Another action
+              li(role='presentation')
+                a(role='menuitem', tabindex='-1', href='#') Something else here
+              li.divider(role='presentation')
+              li(role='presentation')
+                a(role='menuitem', tabindex='-1', href='#') Separated link
+          li.pull-right
+            a.text-muted(href='#')
+              i.fa.fa-gear
+        .tab-content
+          #tab_1.tab-pane.active
+            .box-header.with-border
+              h3.box-title Account
+            // /.box-header
+            .row.row-centered
+              .col-md-3.col-centered(style='vertical-align: middle')
+                .box-body.box-profile
+                  img.profile-user-img.img-responsive.img-circle(src='img/default-50x50.gif', alt='User profile picture')
+                  h3.profile-username.text-center Nina Mcintire
+                .row.row-centered
+                  button.btn.btn-default(type='submit') Upload Image
+                  hr
+                  .description-block
+                    h5.description-header Nina@companyname.com
+                    a(href='#') change password
+                  // /.description-block
+                // /.col
+              .col-md-6.col-centered(style='vertical-align: middle')
+                form.form-horizontal
+                  .box-body
+                    .form-group
+                      label.col-sm-2.control-label(for='inputFirstName') Name
+                      .col-sm-5
+                        input#inputName.form-control(type='email', placeholder='First')
+                      .col-sm-5
+                        input#inputName.form-control(type='email', placeholder='Last')
+                    .form-group
+                      label.col-sm-2.control-label(for='inputEmail') Email
+                      .col-sm-10
+                        input#inputEmail.form-control(type='email', placeholder='Email Id')
+                    .form-group
+                      label.col-sm-2.control-label(for='inputState') State
+                      .col-sm-4
+                        select.form-control.select2(style='width: 100%;')
+                          option Alaska
+                          option California
+                          option Delaware
+                          option Tennessee
+                          option Texas
+                          option Washington
+                      label.col-sm-2.control-label(for='inputCity') City
+                      .col-sm-4
+                        select.form-control.select2(style='width: 100%;')
+                          option Alabama
+                          option Alaska
+                          option California
+                          option Delaware
+                          option Tennessee
+                          option Texas
+                          option Washington
+                    // phone mask
+                    .form-group
+                      label.col-sm-2.control-label(for='inputContact') Contact
+                      .col-sm-4
+                        .input-group
+                          .input-group-addon
+                            i.fa.fa-phone
+                          input.form-control(type='text', data-inputmask='"mask": "(999) 999-9999"', data-mask='')
+                      // /.input group
+                      label.col-sm-2.control-label(for='inputDOB') Birth Date
+                      .col-sm-4
+                        .input-group
+                          .input-group-addon
+                            i.fa.fa-calendar
+                          input.form-control(type='text', data-inputmask="'alias': 'dd/mm/yyyy'", data-mask='')
+                        // /.input group
+                      // /.form group
+                    // /.form group
+                    .form-group
+                      label.col-sm-2.control-label(for='inputExperience') Experience
+                      .col-sm-10
+                        textarea#inputExperience.form-control(placeholder='Experience')
+                    .form-group
+                      label.col-sm-2.control-label(for='inputSkills') Skills
+                      .col-sm-10
+                        select.form-control.select2(multiple='multiple', data-placeholder='Select Skills Set', style='width: 100%;')
+                          option Marketing
+                          option Resourcing
+                          option Speech Giving
+                          option Coding
+                          option Exploring
+                          option Designing
+                          option Debuging
+                    .form-group
+                      .col-sm-offset-2.col-sm-10
+                        .checkbox
+                          label
+                            input(type='checkbox')
+                            |  I agree to the 
+                            a(href='#') terms and conditions
+                    .form-group
+                      .col-sm-offset-2.col-sm-10
+                        button.btn.btn-primary(type='submit') Submit
+          // /.tab-pane
+          #tab_2.tab-pane
+            | The European languages are members of the same family. Their separate existence is a myth.
+            | For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ
+            | in their grammar, their pronunciation and their most common words. Everyone realizes why a
+            | new common language would be desirable: one could refuse to pay expensive translators. To
+            | achieve this, it would be necessary to have uniform grammar, pronunciation and more common
+            | words. If several languages coalesce, the grammar of the resulting language is more simple
+            | and regular than that of the individual languages.
+          // /.tab-pane
+          #tab_3.tab-pane
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            | when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            | It has survived not only five centuries, but also the leap into electronic typesetting,
+            | remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+            | sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+            | like Aldus PageMaker including versions of Lorem Ipsum.
+          // /.tab-pane
+        // /.tab-content
+      // nav-tabs-custom
+    // /.content
+  // /.content-wrapper

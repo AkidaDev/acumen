@@ -15,13 +15,12 @@ html
     // fullCalendar 2.2.5
     link(rel='stylesheet', href='/plugins/fullcalendar/fullcalendar.min.css')
     link(rel='stylesheet', href='/plugins/fullcalendar/fullcalendar.print.css', media='print')
+    // Select2
+    link(rel='stylesheet', href='plugins/select2/select2.min.css')
     // Theme style
     link(rel='stylesheet', href='/css/BotSOLVE.min.css')
     // iCheck 
     link(rel='stylesheet' href='/plugins/iCheck/flat/blue.css')
-    style.
-      canvas{
-      }
     // bootstrap wysihtml5 - text editor
     link(rel='stylesheet' href='/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')
     //
@@ -290,13 +289,13 @@ html
             li.treeview
               a(href='/user')
                 i.fa.fa-users
-                span Manage Users
+                span Manage
                 i.fa.fa-angle-left.pull-right
               ul.treeview-menu
                 li
                   a(href='/user')
                     i.fa.fa-circle-o
-                    |  Users
+                    |  Employees
                 li
                   a(href='/user/add')
                     i.fa.fa-circle-o
@@ -449,6 +448,10 @@ html
                   a(href='#')
                     i.fa.fa-circle-o
                     |  Level One
+            li
+              a(href='/preferences')
+                i.fa.fa-gears
+                span Preferences
             li
               a(href='documentation/index.html')
                 i.fa.fa-book
@@ -630,6 +633,13 @@ html
     script(src='/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')
     //sails socket script
     script(src='/js/dependencies/sails.io.js')
+    // Select2
+    script(src='plugins/select2/select2.full.min.js')
+    // select2 js for input mask
+    script(src='/js/select2.js')
+    // InputMask 
+    script(src='/plugins/input-mask/jquery.inputmask.js')
+    script(src='/plugins/input-mask/jquery.inputmask.date.extensions.js')
     // AdminLTE dashboard demo (This is only for demo purposes)
     script(src='/demo_files/dashboard2.js')
     // AdminLTE for demo purposes
