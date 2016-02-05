@@ -39,12 +39,11 @@ module.exports.routes = {
   '/mailbox':{ view: 'adminpanel/mailbox/inbox' },
   '/mailbox/compose':{ view: 'adminpanel/mailbox/compose' },
   '/mailbox/read':{ view: 'adminpanel/mailbox/read' },
-  //'/login':{view: 'site/login'}, TODO: complete me for production
   '/logout':{view: 'site/logout'},
   '/register':{view: 'site/register'},
   '/user-detail':{view: 'adminpanel/user/user-detail'},
-  '/project':{view: 'adminpanel/project'},
-  '/preferences':{view: 'preferences'}
+  '/login': 'PanelController.login',
+  '/logout' : 'PanelController.logout',
   //'/':{ view },
   //'/':{ view },
 

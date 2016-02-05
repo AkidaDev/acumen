@@ -17,7 +17,7 @@ module.exports = {
 		{
 			if(req.body)
 			{
-				console.log('inside body') //TODO:remove me for production 
+				console.log('inside body') //TODO:remove me for production
 				passport.authenticate('local', function(err, user, info) {
 					if ((err) || (!user)) {
 						return res.render('/panel/login',{ err: "err"});
@@ -26,11 +26,19 @@ module.exports = {
 					req.logIn(user, function(err) {
 						if (err) res.render('/panel/login',{ err: "err"});
 						else{
-							 req.session.cookie.maxAge = 30 * 24 * 60 * 60 * 1000; //TODO: improve with rememeber me
-							 return res.render('message',{
-								location: '/',
-								message: 'login successful'
-							});
+							var hour = 30 * 24 * 60 * 60 * 1000;
+							 req.session.cookie.expires = new Date(Date.now() + hour);
+							 req.session.cookie.maxAge = hour ; //TODO: improve with rememeber me
+							 req.session.save(function (err) {
+							 	if(err)
+									{
+										return res.send(err); // todo remove it fror future reference
+									}
+									return res.render('message',{
+	 								location: '/',
+	 								message: 'login successful'
+	 							});
+							 });
 					}
 					});
 				})(req, res);

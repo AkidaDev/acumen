@@ -1,4 +1,9 @@
 extend ./../layouts/main.jade
+// define variable here
+- var userdata =  user
+  unless  userdata.pimg)
+     userdata.pimg = ""
+// end define variable 
 block content-body
   // Content Wrapper. Contains page content
   .content-wrapper
@@ -49,13 +54,16 @@ block content-body
             .row.row-centered
               .col-md-3.col-centered(style='vertical-align: middle')
                 .box-body.box-profile
-                  img.profile-user-img.img-responsive.img-circle(src='img/default-50x50.gif', alt='User profile picture')
+                  if(p_img == "")
+                    img.profile-user-img.img-responsive.img-circle(src='img/default-50x50.gif' alt='User profile picture')
+                  else
+                    img.profile-user-img.img-responsive.img-circle(src!= userdata.pimg  alt='User profile picture23')
                   h3.profile-username.text-center Nina Mcintire
                 .row.row-centered
                   button.btn.btn-default(type='submit') Upload Image
                   hr
                   .description-block
-                    h5.description-header Nina@companyname.com
+                    h5.description-header Nina@companyname.com // <user>@<companyname>.<tdl>
                     a(href='#') change password
                   // /.description-block
                 // /.col
@@ -65,13 +73,14 @@ block content-body
                     .form-group
                       label.col-sm-2.control-label(for='inputFirstName') Name
                       .col-sm-5
-                        input#inputName.form-control(type='email', placeholder='First')
+                        input#inputName.form-control(type='text', placeholder='First'  value="#{user.fname}")
                       .col-sm-5
-                        input#inputName.form-control(type='email', placeholder='Last')
+                        input#inputName.form-control(type='text', placeholder='Last' value= "#{user.lname}")
                     .form-group
                       label.col-sm-2.control-label(for='inputEmail') Email
                       .col-sm-10
-                        input#inputEmail.form-control(type='email', placeholder='Email Id')
+                        input#inputEmail.form-control(type='email', placeholder='Email Id' value='#{user.email}')
+                        // TODO: get data from the server for city state country. using user preferences
                     .form-group
                       label.col-sm-2.control-label(for='inputState') State
                       .col-sm-4
@@ -99,21 +108,21 @@ block content-body
                         .input-group
                           .input-group-addon
                             i.fa.fa-phone
-                          input.form-control(type='text', data-inputmask='"mask": "(999) 999-9999"', data-mask='')
+                          input.form-control(type='text', data-inputmask='"mask": "(999) 999-9999"', data-mask='' value!= typeof userdata ==="undefined" ? "" : user.phoneno)
                       // /.input group
                       label.col-sm-2.control-label(for='inputDOB') Birth Date
                       .col-sm-4
                         .input-group
                           .input-group-addon
                             i.fa.fa-calendar
-                          input.form-control(type='text', data-inputmask="'alias': 'dd/mm/yyyy'", data-mask='')
+                          input.form-control(type='text', data-inputmask="'alias': 'dd/mm/yyyy'", data-mask='' value!= typeof userdata ==="undefined" ? "" : user.dob )
                         // /.input group
                       // /.form group
                     // /.form group
                     .form-group
                       label.col-sm-2.control-label(for='inputExperience') Experience
                       .col-sm-10
-                        textarea#inputExperience.form-control(placeholder='Experience')
+                        textarea#inputExperience.form-control(placeholder='Experience' value!= typeof userdata ==="undefined" ? "" : user.experience)
                     .form-group
                       label.col-sm-2.control-label(for='inputSkills') Skills
                       .col-sm-10
