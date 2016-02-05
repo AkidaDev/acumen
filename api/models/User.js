@@ -21,7 +21,7 @@ module.exports = {
     dob:{type:'date',required:true},
     skills:{type:'string',require:true},
     experience:{type:'string',require:true},
-    role;{type:'string', required:true},
+    role:{type:'string', required:true},
     getRole: function (cb){
       return cb('admin'); //TODO: get real roles in future
     },

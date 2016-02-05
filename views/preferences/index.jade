@@ -60,7 +60,14 @@ block content-body
                     img.profile-user-img.img-responsive.img-circle(src!= userdata.pimg  alt='User profile picture23')
                   h3.profile-username.text-center Nina Mcintire
                 .row.row-centered
-                  button.btn.btn-default(type='submit') Upload Image
+                  .input-group
+                    span.input-group-btn
+                      span.btn.btn-primary.btn-file
+                        | Browse… 
+                        input(type='file', accept='image/*')
+                    input.form-control(type='text', readonly='')
+                  span.help-block
+                    | feedback "Define the image size"
                   hr
                   .description-block
                     h5.description-header Nina@companyname.com // <user>@<companyname>.<tdl>
