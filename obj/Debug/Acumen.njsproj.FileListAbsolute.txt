@@ -1,0 +1,2 @@
+E:\workspace\acumen\obj\Debug\Acumen.njsprojResolveAssemblyReference.cache
+E:\workspace\acumen\bin\Microsoft.NodejsTools.WebRole.dll

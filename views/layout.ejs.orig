@@ -88,16 +88,7 @@
     -->
 
     <!--SCRIPTS-->
-    <script src="/js/dependencies/sails.io.js"></script>
-    <script src="/js/app.min.js"></script>
-    <script src="/js/bootstrap.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/calendar.js"></script>
-    <script src="/js/datatable.js"></script>
-    <script src="/js/icheck-click.js"></script>
-    <script src="/js/npm.js"></script>
-    <script src="/js/select2.js"></script>
-    <script src="/js/wysihtml.js"></script>
+    <script src="/min/production.min.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>

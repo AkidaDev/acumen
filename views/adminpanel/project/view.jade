@@ -1,0 +1,320 @@
+extends ./../../layouts/main
+block content-body
+  // Content Wrapper. Contains page content
+  .content-wrapper
+    // Content Header (Page header)
+    section.content-header
+      h1
+        | Overview
+        small Details
+      ol.breadcrumb
+        li
+          a(href='#')
+            i.fa.fa-dashboard
+            |  Level
+        li.active Here
+    // Main content
+    section.content
+      .nav-tabs-custom
+        ul.nav.nav-tabs
+          li.active
+            a(href='#project', data-toggle='tab') Project
+          li
+            a(href='#team', data-toggle='tab') Team
+          li
+            a(href='#timeline', data-toggle='tab') Timeline
+          li
+            a(href='#chat', data-toggle='tab') Chat
+        .tab-content
+          #project.active.tab-pane
+            // Project Description
+            .box-header.with-border
+              h5.box-title Description
+          // /.tab-pane
+          #team.tab-pane
+            // The Team Role
+            .box-header.with-border
+              h5.box-title Role
+            .box-body.box-profile
+              img.profile-user-img.img-responsive.img-circle(src='img/user4-128x128.jpg', alt='User picture')
+              h3.profile-username.text-center Nina Mcintire
+              p.text-muted.text-center Software Engineer | Project Leader
+            // /.box-body
+            hr
+            .row.row-centered
+              .col-sm-2.col-centered
+                .box-body.box-profile
+                  img.profile-user-img.img-responsive.img-circle(src='img/user6-128x128.jpg', alt='User picture')
+                  h3.profile-username.text-center Adam Carmella
+                  p.text-muted.text-center Software Engineer | Code Tester
+                  .box-footer
+                    ul.nav.nav-stacked
+                      li
+                        a(href='#')
+                          | Module A
+                          span.pull-right.badge.bg-blue 
+                            i.fa.fa-check
+                      li
+                        a(href='#')
+                          | Module B
+                          span.pull-right.badge.bg-blue 
+                            i.fa.fa-check
+                      li
+                        a(href='#')
+                          | Module C
+                          span.pull-right.badge.bg-aqua 
+                            i.fa.fa-circle-o-notch
+                      li
+                        a(href='#')
+                          | Module D
+                          span.pull-right.badge.bg-aqua 
+                            i.fa.fa-circle-o-notch
+                // /.box-body
+              // /.col
+              .col-sm-2.col-centered
+                .box-body.box-profile
+                  img.profile-user-img.img-responsive.img-circle(src='img/user1-128x128.jpg', alt='User picture')
+                  h3.profile-username.text-center Zender Mcintire
+                  p.text-muted.text-center Software Engineer | UI Designer
+                  .box-footer
+                    ul.nav.nav-stacked
+                      li
+                        a(href='#')
+                          | Calc UI
+                          span.pull-right.badge.bg-blue 
+                            i.fa.fa-check
+                      li
+                        a(href='#')
+                          | Front-End Numeration
+                          span.pull-right.badge.bg-blue 
+                            i.fa.fa-check
+                      li
+                        a(href='#')
+                          | Connect Database
+                          span.pull-right.badge.bg-aqua 
+                            i.fa.fa-circle-o-notch
+                      li
+                        a(href='#')
+                          | Smooth transition
+                          span.pull-right.badge.bg-blue 
+                            i.fa.fa-check
+                // /.box-body
+              // /.col
+              .col-sm-2.col-centered
+                .box-body.box-profile
+                  img.profile-user-img.img-responsive.img-circle(src='img/user2-160x160.jpg', alt='User picture')
+                  h3.profile-username.text-center Alexander
+                  p.text-muted.text-center Software Engineer | C# Coder
+                  .box-footer
+                    ul.nav.nav-stacked
+                      li
+                        a(href='#')
+                          | BackEnd Calc code
+                          span.pull-right.badge.bg-blue 
+                            i.fa.fa-check
+                      li
+                        a(href='#')
+                          | Numeration code
+                          span.pull-right.badge.bg-aqua 
+                            i.fa.fa-circle-o-notch
+                      li
+                        a(href='#')
+                          | Database Setup
+                          span.pull-right.badge.bg-blue 
+                            i.fa.fa-check
+                      li
+                        a(href='#')
+                          | Bug Resolve
+                          span.pull-right.badge.bg-aqua 
+                            i.fa.fa-circle-o-notch
+                // /.box-body
+              // /.col
+              // /.col
+            // /.row
+          // /.tab-pane
+          #timeline.tab-pane
+            // The timeline
+            ul.timeline.timeline-inverse
+              // timeline time label
+              li.time-label
+                span.bg-red
+                  | 10 Feb. 2014
+              // /.timeline-label
+              // timeline item
+              li
+                i.fa.fa-envelope.bg-blue
+                .timeline-item
+                  span.time
+                    i.fa.fa-clock-o
+                    |  12:05
+                  h3.timeline-header
+                    a(href='#') Support Team
+                    |  sent you an email
+                  .timeline-body
+                    | Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
+                    | weebly ning heekya handango imeem plugg dopplr jibjab, movity
+                    | jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
+                    | quora plaxo ideeli hulu weebly balihoo...
+                  .timeline-footer
+                    a.btn.btn-primary.btn-xs Read more
+                    a.btn.btn-danger.btn-xs Delete
+              // END timeline item
+              // timeline item
+              li
+                i.fa.fa-user.bg-aqua
+                .timeline-item
+                  span.time
+                    i.fa.fa-clock-o
+                    |  5 mins ago
+                  h3.timeline-header.no-border
+                    a(href='#') Sarah Young
+                    |  accepted your friend request
+              // END timeline item
+              // timeline item
+              li
+                i.fa.fa-comments.bg-yellow
+                .timeline-item
+                  span.time
+                    i.fa.fa-clock-o
+                    |  27 mins ago
+                  h3.timeline-header
+                    a(href='#') Jay White
+                    |  commented on your post
+                  .timeline-body
+                    | Take me to your leader!
+                    | Switzerland is small and neutral!
+                    | We are more like Germany, ambitious and misunderstood!
+                  .timeline-footer
+                    a.btn.btn-warning.btn-flat.btn-xs View comment
+              // END timeline item
+              // timeline time label
+              li.time-label
+                span.bg-green
+                  | 3 Jan. 2014
+              // /.timeline-label
+              // timeline item
+              li
+                i.fa.fa-camera.bg-purple
+                .timeline-item
+                  span.time
+                    i.fa.fa-clock-o
+                    |  2 days ago
+                  h3.timeline-header
+                    a(href='#') Mina Lee
+                    |  uploaded new photos
+                  .timeline-body
+                    img.margin(src='http://placehold.it/150x100', alt='...')
+                    img.margin(src='http://placehold.it/150x100', alt='...')
+                    img.margin(src='http://placehold.it/150x100', alt='...')
+                    img.margin(src='http://placehold.it/150x100', alt='...')
+              // END timeline item
+              li
+                i.fa.fa-clock-o.bg-gray
+          // /.tab-pane
+          #chat.tab-pane
+            // The Team group chat
+            .row
+              .col-md-4
+                // USERS LIST
+                .box.box-primary
+                  .box-header.with-border
+                    h3.box-title Team Members
+                    .box-tools.pull-right
+                      span.label.label-primary 1 New Members
+                  // /.box-header
+                  .box-body.no-padding
+                    ul.users-list.clearfix
+                      li
+                        img(src='img/user1-128x128.jpg', alt='User Image')
+                        a.users-list-name(href='#') Alexander Pierce
+                        span.users-list-date Today
+                      li
+                        img(src='img/user8-128x128.jpg', alt='User Image')
+                        a.users-list-name(href='#') Norman
+                        span.users-list-date Yesterday
+                      li
+                        img(src='img/user7-128x128.jpg', alt='User Image')
+                        a.users-list-name(href='#') Jane
+                        span.users-list-date 12 Jan
+                      li
+                        img(src='img/user6-128x128.jpg', alt='User Image')
+                        a.users-list-name(href='#') John
+                        span.users-list-date 12 Jan
+                      li
+                        img(src='img/user2-160x160.jpg', alt='User Image')
+                        a.users-list-name(href='#') Alexander
+                        span.users-list-date 13 Jan
+                    // /.users-list
+                  // /.box-body
+                // /.box
+              // /.col
+              .col-md-8
+                .box.box-primary.direct-chat.direct-chat-primary
+                  .box-header.with-border
+                    h3.box-title Team Chat
+                    .box-tools.pull-right
+                      span.badge.bg-light-blue(data-toggle='tooltip', title='3 New Messages') 3
+                      button.btn.btn-box-tool(data-widget='collapse')
+                        i.fa.fa-minus
+                      button.btn.btn-box-tool(data-toggle='tooltip', title='Contacts', data-widget='chat-pane-toggle')
+                        i.fa.fa-comments
+                      button.btn.btn-box-tool(data-widget='remove')
+                        i.fa.fa-times
+                  // /.box-header
+                  .box-body
+                    // Conversations are loaded here
+                    .direct-chat-messages
+                      // Message. Default to the left
+                      .direct-chat-msg
+                        .direct-chat-info.clearfix
+                          span.direct-chat-name.pull-left Alexander Pierce
+                          span.direct-chat-timestamp.pull-right 23 Jan 2:00 pm
+                        // /.direct-chat-info
+                        img.direct-chat-img(src='img/user1-128x128.jpg', alt='message user image')
+                        // /.direct-chat-img
+                        .direct-chat-text
+                          | Is this template really for free? That's unbelievable!
+                        // /.direct-chat-text
+                      // /.direct-chat-msg
+                      // Message to the right
+                      .direct-chat-msg.right
+                        .direct-chat-info.clearfix
+                          span.direct-chat-name.pull-right Sarah Bullock
+                          span.direct-chat-timestamp.pull-left 23 Jan 2:05 pm
+                        // /.direct-chat-info
+                        img.direct-chat-img(src='img/user3-128x128.jpg', alt='message user image')
+                        // /.direct-chat-img
+                        .direct-chat-text
+                          | You better believe it!
+                        // /.direct-chat-text
+                      // /.direct-chat-msg
+                    // /.direct-chat-messages
+                    // Contacts are loaded here
+                    .direct-chat-contacts
+                      ul.contacts-list
+                        li
+                          a(href='#')
+                            img.contacts-list-img(src='img/user1-128x128.jpg')
+                            .contacts-list-info
+                              span.contacts-list-name
+                                | Count Dracula
+                                small.contacts-list-date.pull-right 2/28/2015
+                              span.contacts-list-msg How have you been? I was...
+                            // /.contacts-list-info
+                        // End Contact Item
+                      // /.contatcts-list
+                    // /.direct-chat-pane
+                  // /.box-body
+                  .box-footer
+                    form(action='#', method='post')
+                      .input-group
+                        input.form-control(type='text', name='message', placeholder='Type Message ...')
+                        span.input-group-btn
+                          button.btn.btn-primary.btn-flat(type='button') Send
+                  // /.box-footer
+                // /.direct-chat
+          // /.tab-pane
+        // /.tab-content
+      // /.nav-tabs-custom
+    // /.content
+  // /.content-wrapper
