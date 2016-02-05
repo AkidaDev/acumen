@@ -7,21 +7,22 @@
 
 module.exports = {
   connection: "localMongodb",
-  attributes: {
-    name:{type: "string", required: true},
-    username : { type: 'string', required: true, unique: true },
-    pimg: {type:'string', required: true,unique: true},
-    password : { type: 'string', required: true },
-    email : { type: 'email', required:true },
+  attributes:{
+    fname:{type: "string", required: true},
+    lname:{type: "string", required: true},
+    username:{ type: 'string', required: true, unique: true },
+    //pimg:{type:'string', required: true,unique: true},
+    password:{ type: 'string', required: true },
+    email:{ type: 'email', required:true },
     country:{type:'string', required:false},
     state:{type:'string', required:false},
     city:{type:'string', required:false},
     phoneno:{type:'string', required:true},
-    skill:{type:'string', required:true},
+  //  skill:{type:'string', required:true},
     dob:{type:'date',required:true},
-    skills:{type:'string',require:true},
+    //skills:{type:'string',require:true},
     experience:{type:'string',require:true},
-    role;{type:'string', required:true},
+    role:{type:'string', required:true},
     getRole: function (cb){
       return cb('admin'); //TODO: get real roles in future
     },
@@ -32,6 +33,7 @@ module.exports = {
     },
   },
   beforeCreate: function (user, cb) {
+    var bcrypt = require('bcrypt');
     bcrypt.genSalt(10,function (err,salt) {
       bcrypt.hash(user.password,salt, function (err,hash) {
          if(err){

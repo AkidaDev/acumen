@@ -1,8 +1,6 @@
 extend ./../layouts/main.jade
 // define variable here
-- var userdata =  user
-  unless  userdata.pimg)
-     userdata.pimg = ""
+
 // end define variable 
 block content-body
   // Content Wrapper. Contains page content
@@ -54,16 +52,17 @@ block content-body
             .row.row-centered
               .col-md-3.col-centered(style='vertical-align: middle')
                 .box-body.box-profile
-                  if(p_img == "")
-                    img.profile-user-img.img-responsive.img-circle(src='img/default-50x50.gif' alt='User profile picture')
+                  if( typeof(username) !== 'undefined')
+                    img.profile-user-img.img-responsive.img-circle(src= "#{user.pimg}"  alt='User profile picture23')
                   else
-                    img.profile-user-img.img-responsive.img-circle(src!= userdata.pimg  alt='User profile picture23')
+                    img.profile-user-img.img-responsive.img-circle(src='img/default-50x50.gif' alt='User profile picture')
                   h3.profile-username.text-center Nina Mcintire
                 .row.row-centered
                   button.btn.btn-default(type='submit') Upload Image
                   hr
                   .description-block
-                    h5.description-header Nina@companyname.com // <user>@<companyname>.<tdl>
+                    h5.description-header Nina@companyname.com 
+                    // <user>@<companyname>.<tdl>
                     a(href='#') change password
                   // /.description-block
                 // /.col

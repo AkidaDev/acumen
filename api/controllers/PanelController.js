@@ -80,8 +80,6 @@ module.exports = {
 			res.redirect('/panel');
 		}
   },
-
-
   /**
    * `PanelController.logout()`
    */
@@ -89,5 +87,72 @@ module.exports = {
     return res.json({
       todo: 'logout() is not implemented yet!'
     });
-  }
+  },
+	generate: function (req,res) {
+		console.log("here");
+		var users = {
+			1: {
+				username: "mercer",
+				fname:"mercer",
+				lname:"mercer",
+				password: "000",
+				email: "demo@botsolve.com",
+				role: 'admin',
+				country: 'India',
+				state: "Delhi",
+				city: "New Delhi",
+				dob: '12/12/2014',
+				phoneno: "999000xxxx",
+			},
+			2: {
+				username: "pankaj",
+				password: "000",
+				fname:"pankaj",
+				lname:"chauhan",
+				email: "pankaj@botsolve.com",
+				role: 'Software Engineer',
+				country: 'India',
+				state: "Delhi",
+				city: "New Delhi",
+				dob: '12/12/2015',
+				phoneno: "99900xxxxx",
+			},
+			3: {
+				username: "Alishan",
+				fname: "Alishan",
+				lname: "Khan",
+				password: "000",
+				email: "alishan@botsolve.com",
+				role: 'Software Engineer',
+				country: 'India',
+				state: "Delhi",
+				city: "New Delhi",
+				dob: '12/12/2014',
+				phoneno: "999000xxxx",
+			},
+			4: {
+				username: "Ataullah",
+				password: "000",
+				fname: "Ataullah",
+				lname: "Khan",
+				email: "ataullah@botsolve.com",
+				role: 'manager',
+				country: 'India',
+				state: "Delhi",
+				city: "New Delhi",
+				dob: '12/12/2014',
+				phoneno: "999000xxxw",
+			},
+		};
+		console.log(users);
+		for(var i = 1; i <=4; i++)
+			{
+				User.create(users[i]).exec(function createDB(err,created){
+					if(err)
+					 console.log(err);
+					else
+						console.log(created);
+				});
+			}
+	}
 };
