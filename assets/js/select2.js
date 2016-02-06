@@ -10,8 +10,4 @@ $(function() {
   //phone mask
   $("[data-mask]").inputmask();
 
-  //Timepicker
-  $(".timepicker").timepicker({
-    showInputs: false
-  });
 });

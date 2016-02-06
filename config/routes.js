@@ -44,6 +44,7 @@ module.exports.routes = {
   '/user-detail':{view: 'adminpanel/user/user-detail'},
   '/login': 'PanelController.login',
   '/logout' : 'PanelController.logout',
+  '/administrator/skills':{view: 'administrator/skills'},
   //'/':{ view },
   //'/':{ view },
 

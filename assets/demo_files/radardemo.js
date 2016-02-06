@@ -28,4 +28,4 @@ window.onload = function(){
   window.myRadar = new Chart(document.getElementById("canvas").getContext("2d")).Radar(radarChartData, {
     responsive: true
   });
-}
+};
