@@ -17,60 +17,7 @@ block content-body
       .row
         .col-md-3
           a.btn.btn-primary.btn-block.margin-bottom(href='/mailbox/compose') Compose
-          .box.box-solid
-            .box-header.with-border
-              h3.box-title Folders
-              .box-tools
-                button.btn.btn-box-tool(data-widget='collapse')
-                  i.fa.fa-minus
-            .box-body.no-padding
-              ul.nav.nav-pills.nav-stacked
-                li
-                  a(href='/mailbox')
-                    i.fa.fa-inbox
-                    |  Inbox 
-                    span.label.label-primary.pull-right 12
-                li
-                  a(href='#')
-                    i.fa.fa-envelope-o
-                    |  Sent
-                li
-                  a(href='#')
-                    i.fa.fa-file-text-o
-                    |  Drafts
-                li
-                  a(href='#')
-                    i.fa.fa-filter
-                    |  Junk 
-                    span.label.label-warning.pull-right 65
-                li
-                  a(href='#')
-                    i.fa.fa-trash-o
-                    |  Trash
-            // /.box-body
-          // /. box
-          .box.box-solid
-            .box-header.with-border
-              h3.box-title Labels
-              .box-tools
-                button.btn.btn-box-tool(data-widget='collapse')
-                  i.fa.fa-minus
-            .box-body.no-padding
-              ul.nav.nav-pills.nav-stacked
-                li
-                  a(href='#')
-                    i.fa.fa-circle-o.text-red
-                    |  Important
-                li
-                  a(href='#')
-                    i.fa.fa-circle-o.text-yellow
-                    |  Promotions
-                li
-                  a(href='#')
-                    i.fa.fa-circle-o.text-light-blue
-                    |  Social
-            // /.box-body
-          // /.box
+          include toolbox
         // /.col
         .col-md-9
           .box.box-primary
