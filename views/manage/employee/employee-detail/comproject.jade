@@ -1,0 +1,63 @@
+.box.box-primary
+  .box-header.with-border
+    h3.box-title Completed
+    .box-tools
+      .input-group(style='width: 200px;')
+        input.form-control.input-sm.pull-right(type='text', name='table_search', placeholder='Search')
+        .input-group-btn
+          button.btn.btn-sm.btn-default
+            i.fa.fa-search
+  // /.box-header
+  .box-body
+    table.table.table-bordered.table-hover
+      tr
+        th(style='width: 20px') ID
+        th Projects
+        th Date
+        th(style='width: 20px') Details
+      tr
+        td 186
+        td Update software
+        td 11-Dec-2014
+        td
+          button(onclick="window.location.href='/view-project'").btn.btn-primary.btn-xs
+            i.fa.fa-folder-open
+            |  View
+      tr
+        td 289
+        td Clean database
+        td 11-Dec-2014
+        td
+          button(onclick="window.location.href='/view-project'").btn.btn-primary.btn-xs
+            i.fa.fa-folder-open
+            |  View
+      tr
+        td 436
+        td Cron job running
+        td 11-Dec-2014
+        td
+          button(onclick="window.location.href='/view-project'").btn.btn-primary.btn-xs
+            i.fa.fa-folder-open
+            |  View
+      tr
+        td 136
+        td Fix and squish bugs
+        td 11-Dec-2014
+        td
+          button(onclick="window.location.href='/view-project'").btn.btn-primary.btn-xs
+            i.fa.fa-folder-open
+            |  View
+  // /.box-body
+  .box-footer.clearfix
+    ul.pagination.pagination-sm.no-margin.pull-right
+      li
+        a(href='#') «
+      li
+        a(href='#') 1
+      li
+        a(href='#') 2
+      li
+        a(href='#') 3
+      li
+        a(href='#') »
+// /.box

@@ -47,3 +47,17 @@ block content-body
         a.text-center(href='login.html') I already have a membership
       // /.form-box
     // /.register-box
+    // jQuery 2.1.4
+    script(src='/plugins/jQuery/jQuery-2.1.4.min.js')
+    // Bootstrap 3.3.5
+    script(src='/js/bootstrap.min.js')
+    // iCheck
+    script(src='/plugins/iCheck/icheck.min.js')
+    script.
+      $(function () {
+      $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+      });
+      });

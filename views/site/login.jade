@@ -44,3 +44,17 @@ block content-body
         a(href='#') I forgot my password
         br
         a.text-center(href='/register') Register a new membership
+    // jQuery 2.1.4
+    script(src='/plugins/jQuery/jQuery-2.1.4.min.js')
+    // Bootstrap 3.3.5
+    script(src='/js/bootstrap.min.js')
+    // iCheck
+    script(src='/plugins/iCheck/icheck.min.js')
+    script.
+      $(function () {
+      $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+      });
+      });

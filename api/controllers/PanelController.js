@@ -10,7 +10,7 @@ module.exports = {
    * `PanelController.login()`
    */
 	 index: function(req,res){
-		 res.render('adminpanel/dashboard',{});
+		 res.render('dashboard',{});
 	 },
   login: function (req, res) {
 		if(!req.user)
