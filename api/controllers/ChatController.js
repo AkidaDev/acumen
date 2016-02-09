@@ -4,7 +4,6 @@
  * @description :: Server-side logic for managing chats
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
-
 module.exports = {
   /**
    * `ChatController.index()`
@@ -13,20 +12,20 @@ module.exports = {
     return res.render('test');
   },
   test: function(req, res) {
-    sails.sockets.broadcast('message', {
-      msg: 'Hi there!'
-    });
-    //  res.render('te')
+    var chat  = {
+      user: ["user1","user2","user3"],
+      message: [{u_id:"someid",time:"sometime",message:"somemessage"},{u_id:"someid",time:"sometime",message:"somemessage"}],
+    };
+    res.send(JSON.stringify(chat));
   },
   createRoom: function (req,res) {
     //TODO: add security layer here
     var name = req.param("name");
     if(!name)
       return res.json(500,{message:"invalid name"});
-    Chatroom.create({name:name},function (room) {
+    Chatroom.create({name:name},function (room) {}
       //TODO: add complex room structure eg: room assing to group of users or a project or a team
-      res.send('room created');
-    });
+    );
   },
   getRooms: function(req, res) {
     res.json(sails.sockets.rooms());

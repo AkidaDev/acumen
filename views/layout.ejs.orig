@@ -92,7 +92,7 @@
     <script src="/js/app.min.js"></script>
     <script src="/js/bootstrap.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/browse.js"></script>
+    <script src="/js/browsefile.js"></script>
     <script src="/js/calendar.js"></script>
     <script src="/js/datatable.js"></script>
     <script src="/js/icheck-click.js"></script>
