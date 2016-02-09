@@ -1,0 +1,104 @@
+aside.main-sidebar
+  // sidebar: style can be found in sidebar.less
+  section.sidebar
+    // Sidebar user panel
+    .user-panel
+      .pull-left.image
+        img.img-circle(src='/img/user2-160x160.jpg', alt='User Image')
+      .pull-left.info
+        p Alexander Pierce
+        a(href='#')
+          i.fa.fa-circle.text-success
+          |  Online
+    // search form
+    form.sidebar-form(action='#', method='get')
+      .input-group
+        input.form-control(type='text', name='q', placeholder='Search...')
+        span.input-group-btn
+          button#search-btn.btn.btn-flat(type='submit', name='search')
+            i.fa.fa-search
+    // /.search form
+    // sidebar menu: : style can be found in sidebar.less
+    ul.sidebar-menu
+      li.header MAIN NAVIGATION
+      li.active.treeview
+        a(href='/')
+          i.fa.fa-dashboard
+          span Dashboard
+      li.treeview
+        a(href='#')
+          i.fa.fa-laptop
+          span Administrative Tools
+          i.fa.fa-angle-left.pull-right
+        ul.treeview-menu
+          li
+            a(href='/administrator/skills')
+              i.fa.fa-circle-o
+              |  Skills
+          li
+            a(href='#')
+              i.fa.fa-circle-o
+              |  Icons
+          li
+            a(href='#')
+              i.fa.fa-circle-o
+              |  Buttons
+          li
+            a(href='#')
+              i.fa.fa-circle-o
+              |  Sliders
+          li
+            a(href='#')
+              i.fa.fa-circle-o
+              |  Timeline
+          li
+            a(href='#')
+              i.fa.fa-circle-o
+              |  Modals
+      li.treeview
+        a(href='/user')
+          i.fa.fa-users
+          span Manage
+          i.fa.fa-angle-left.pull-right
+        ul.treeview-menu
+          li
+            a(href='/user')
+              i.fa.fa-circle-o
+              |  Employees
+      li
+        a(href='/project')
+          i.fa.fa-cubes
+          span Projects
+          small.label.label-primary.pull-right new
+      li
+        a(href='/calendar')
+          i.fa.fa-calendar
+          span Calendar
+          small.label.bg-aqua.pull-right 3
+      li
+        a(href='/mailbox')
+          i.fa.fa-envelope
+          span Mailbox
+          small.label.label-default.pull-right 12
+      li
+        a(href='/preferences')
+          i.fa.fa-gears
+          span Preferences
+      li
+        a(href='documentation/index.html')
+          i.fa.fa-book
+          span Documentation
+      li.header LABELS
+      li
+        a(href='#')
+          i.fa.fa-circle-o.text-red
+          span Important
+      li
+        a(href='#')
+          i.fa.fa-circle-o.text-yellow
+          span Warning
+      li
+        a(href='#')
+          i.fa.fa-circle-o.text-aqua
+          span Information
+  // /.sidebar

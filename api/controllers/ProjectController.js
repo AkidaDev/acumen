@@ -6,6 +6,6 @@
  */
 module.exports = {
 	index:function (req,res) {
-		res.render('adminpanel/project',{})
+		res.render('project',{})
 	}
 };

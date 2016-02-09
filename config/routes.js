@@ -32,19 +32,20 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {view: 'adminpanel/dashboard'},
-  '/user':{view: 'adminpanel/user'},
-  '/user/add':{view: 'adminpanel/user/add'},
-  '/calendar':{ view:'adminpanel/calendar' },
-  '/mailbox':{ view: 'adminpanel/mailbox/inbox' },
-  '/mailbox/compose':{ view: 'adminpanel/mailbox/compose' },
-  '/mailbox/read':{ view: 'adminpanel/mailbox/read' },
+  '/': {view: 'dashboard'},
+  '/user':{view: 'manage/employee'},
+  '/user/add':{view: 'manage/employee/add'},
+  '/calendar':{ view:'calendar' },
+  '/mailbox':{ view: 'mailbox/inbox' },
+  '/mailbox/compose':{ view: 'mailbox/compose' },
+  '/mailbox/read':{ view: 'mailbox/read' },
   '/logout':{view: 'site/logout'},
   '/register':{view: 'site/register'},
-  '/user-detail':{view: 'adminpanel/user/user-detail'},
+  '/user-detail':{view: 'manage/employee/employee-detail'},
   '/login': 'PanelController.login',
   '/logout' : 'PanelController.logout',
   '/administrator/skills':{view: 'administrator/skills'},
+  '/view-project':{ view: 'project/view-detail' }
   //'/':{ view },
   //'/':{ view },
 

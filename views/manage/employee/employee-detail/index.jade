@@ -1,0 +1,36 @@
+extends ./../../../layouts/main
+block content-body
+  // Content Wrapper. Contains page content
+  .content-wrapper
+    // Content Header (Page header)
+    section.content-header
+      h1
+        | Nadia
+        small Details
+      ol.breadcrumb
+        li
+          a(href='/')
+            i.fa.fa-dashboard
+            |  Home
+        li
+          a(href='/user') Manage Users
+        li.active User Details
+    // Main content
+    section.content
+      // Your Page Content Here
+      .row
+        .col-md-4
+          include overview
+        // /.col
+        .col-md-8
+          include todolist
+      include skillgraph
+      .row
+        .col-md-6
+          include details
+          include  progress
+        .col-md-6
+          include onproject
+          include comproject
+    // /.content
+  // /.content-wrapper
