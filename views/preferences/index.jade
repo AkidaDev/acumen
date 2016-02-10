@@ -43,7 +43,7 @@ block content-body
               i.fa.fa-gear
         .tab-content
           #tab_1.tab-pane.active
-            include general
+            include ./general.jade
           // /.tab-pane
           #tab_2.tab-pane
             | The European languages are members of the same family. Their separate existence is a myth.
@@ -67,3 +67,13 @@ block content-body
       // nav-tabs-custom
     // /.content
   // /.content-wrapper
+block append bootscript
+  // Select2
+  script(src='/plugins/select2/select2.full.min.js')
+  // InputMask 
+  script(src='/plugins/input-mask/jquery.inputmask.js')
+  script(src='/plugins/input-mask/jquery.inputmask.date.extensions.js')
+  // select2 js for input mask
+  script(src='/js/select2.js')
+  // for Browser file from the Computer
+  script(src='/js/browsefile.js')

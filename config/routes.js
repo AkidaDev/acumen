@@ -41,11 +41,11 @@ module.exports.routes = {
   '/mailbox/read':{ view: 'mailbox/read' },
   '/logout':{view: 'site/logout'},
   '/register':{view: 'site/register'},
-  '/user-detail':{view: 'manage/employee/employee-detail'},
+  '/user-detail':{view: 'manage/employee/details'},
   '/login': 'PanelController.login',
   '/logout' : 'PanelController.logout',
   '/administrator/skills':{view: 'administrator/skills'},
-  '/view-project':{ view: 'project/view-detail' }
+  '/view-project':{ view: 'project/details' }
   //'/':{ view },
   //'/':{ view },
 

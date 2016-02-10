@@ -28,14 +28,20 @@ block content-body
               |  New Project 
         .tab-content
           #tab_1.tab-pane.active
-            include ongoing
+            include ./ongoing.jade
             // /.box
           // /.tab-pane
           #tab_2.tab-pane
-            include completed
+            include ./completed.jade
             // /.box
           // /.tab-pane
         // /.tab-content
       // nav-tabs-custom
     // /.content
   // /.content-wrapper
+block append bootscript
+  // Datatable 
+  script(src='/plugins/datatables/jquery.dataTables.min.js')
+  script(src='/plugins/datatables/dataTables.bootstrap.min.js')
+  // data table properties
+  script(src='/js/datatable.js')

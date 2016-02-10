@@ -206,9 +206,12 @@
 
   demo_settings.append("<h4 class='control-sidebar-heading'>Skins</h4>");
   demo_settings.append(skins_list);
+
   tab_pane.append(demo_settings);
   $("#control-sidebar-home-tab").after(tab_pane);
+
   setup();
+
   /**
    * Toggles layout classes
    *
