@@ -17,14 +17,13 @@ module.exports = {
 		{
 			if(req.body)
 			{
-				console.log('inside body') //TODO:remove me for production
 				passport.authenticate('local', function(err, user, info) {
 					if ((err) || (!user)) {
-						return res.render('/panel/login',{ err: "err"});
+						return res.render('site/login',{ err: "err"});
 						res.send(err);
 					}
 					req.logIn(user, function(err) {
-						if (err) res.render('/panel/login',{ err: "err"});
+						if (err) res.render('site/login',{ err: "err"});
 						else{
 							var hour = 30 * 24 * 60 * 60 * 1000;
 							 req.session.cookie.expires = new Date(Date.now() + hour);

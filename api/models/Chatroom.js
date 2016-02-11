@@ -8,6 +8,8 @@
 module.exports = {
   connection: "localMongodb",
   attributes: {
-    name:{type:"string", required:true,unique:true}
+    name:{type:"string", required:true,unique:true},
+    createdBy: {type:"text"},
+    private:{ type:"boolean",required:true}
   }
 };

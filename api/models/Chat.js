@@ -5,7 +5,9 @@
 * @docs        :: http://sailsjs.org/#!documentation/models
 */
 module.exports = {
+  connection: "localMongodb",
   attributes: {
-    index : { type: 'string' }
-  }
+    chatRoomID: { type:'string', unique:true},
+    messages:{defaultsTo:[]}
+  },
 };
