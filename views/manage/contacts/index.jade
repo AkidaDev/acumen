@@ -1,0 +1,37 @@
+extends ./../../layouts/main.jade
+block content-body
+  // Content Wrapper. Contains page content
+  .content-wrapper
+    // Content Header (Page header)
+    section.content-header
+      h1
+        | Contacts
+        small Details
+      ol.breadcrumb
+        li
+          a(href='/')
+            i.fa.fa-dashboard
+            |  Home
+        li.active Contacts
+    // Main content
+    section.content
+      // Your Page Content Here
+      .nav-tabs-custom
+      .nav-tabs-custom
+        ul.nav.nav-tabs
+          li.active
+            a(href='#colleague', data-toggle='tab') Colleague
+          li
+            a(href='#client', data-toggle='tab') Client
+          li.pull-right
+            button.btn.bg-aqua
+              i.fa.fa-plus 
+              |  New Contact 
+        .tab-content
+          #colleague.active.tab-pane
+            // Project Description
+            include ./colleague.jade
+          // /.tab-pane
+          #client.tab-pane
+            // The Team Role
+            include ./client.jade

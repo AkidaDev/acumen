@@ -1,4 +1,8 @@
 extends ./../layouts/main.jade
+block append mainhead
+  // fullCalendar 2.2.5
+  link(rel='stylesheet', href='/plugins/fullcalendar/fullcalendar.min.css')
+  link(rel='stylesheet', href='/plugins/fullcalendar/fullcalendar.print.css', media='print')
 block content-body
   // Content Wrapper. Contains page content
   .content-wrapper

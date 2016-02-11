@@ -1,4 +1,7 @@
 extends ./../../layouts/main
+block append mainhead
+  // DataTables
+  link(rel='stylesheet', href='/plugins/datatables/dataTables.bootstrap.css')
 block content-body
   // Content Wrapper. Contains page content
   .content-wrapper
@@ -23,7 +26,7 @@ block content-body
           li.active
             a(href='#tab_1', data-toggle='tab') Employees
           li.pull-right
-            button(onclick="window.location.href='/user/add'").btn.bg-aqua
+            button(onclick="window.location.href='/manage/user/add'").btn.bg-aqua
               i.fa.fa-plus 
               |  New User
         .tab-content
