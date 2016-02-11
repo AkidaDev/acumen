@@ -20,17 +20,26 @@ block content-body
       // Your Page Content Here
       .row
         .col-md-4
-          include overview
+          include ./overview.jade
         // /.col
         .col-md-8
-          include todolist
-      include skillgraph
+          include ./todolist.jade
+      include ./skillgraph.jade
       .row
         .col-md-6
-          include details
-          include  progress
+          include ./details.jade
+          include ./progress.jade
         .col-md-6
-          include onproject
-          include comproject
+          include ./onproject.jade
+          include ./comproject.jade
     // /.content
   // /.content-wrapper
+block append bootscript
+  // iCheck 
+  script(src='/plugins/iCheck/icheck.min.js')
+  // icheck click event
+  script(src='/js/icheck-blue.js')
+  // ChartJS 1.0.1
+  script(src='/plugins/chartjs/Chart.min.js')
+  // AdminLTE for demo purposes
+  script(src='/demo_files/radardemo.js')

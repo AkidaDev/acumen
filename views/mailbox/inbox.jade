@@ -18,7 +18,7 @@ block content-body
       .row
         .col-md-3
           a.btn.btn-primary.btn-block.margin-bottom(href='/mailbox/compose') Compose
-          include toolbox
+          include ./toolbox.jade
         // /.col
         .col-md-9
           .box.box-primary
@@ -293,3 +293,8 @@ block content-body
       // /.row
     // /.content
   // /.content-wrapper
+block append bootscript
+  // iCheck 
+  script(src='/plugins/iCheck/icheck.min.js')
+  // icheck click all event
+  script(src='/js/icheck-click.js')
