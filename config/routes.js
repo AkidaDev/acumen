@@ -49,7 +49,7 @@ module.exports.routes={
   '/administrator/resource':{view:'administrator/resource'},
   '/administrator/swot':{view:'administrator/swot'},
   '/administrator/timeline':{view:'administrator/timeline'},
-  '/administrator/skills':{view:'administrator/skills'},
+  '/administrator/skillset':{view:'administrator/skillset'},
   '/manage/users':{view:'manage/employee'},
   '/manage/user/add':{view:'manage/employee/add'},
   '/manage/contacts':{view:'manage/contacts'},
