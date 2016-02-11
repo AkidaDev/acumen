@@ -10,6 +10,7 @@ module.exports = {
   attributes: {
     name:{type:"string", required:true,unique:true},
     createdBy: {type:"text"},
-    private:{ type:"boolean",required:true}
+    private:{ type:"boolean",required:true},
+    users:{required:true},
   }
 };

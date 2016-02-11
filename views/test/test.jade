@@ -10,12 +10,5 @@ block content-body
         input(type="radio" name="Room[private]" value="true")
         input(type="radio" name="Room[private]" value="False")
         button#createroom.btn.btn-default(type="button") Create Room #[.fa.fa-comment]
-    .chatbox
-      .boxbody
-        #messages
-      .boxfooter
-        .form
-          input(type="text" placeholder="Type Message" width="300")
-          button.btn.btn-primary#chatsend Send #[.fa.fa-send]
-    script(src='/plugins/jQuery/jQuery-2.1.4.min.js')
-    script(src="/js/select2.js")
+   script(src='/plugins/jQuery/jQuery-2.1.4.min.js')
+   script(src="/js/acumen.js")

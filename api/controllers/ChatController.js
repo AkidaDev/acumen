@@ -14,7 +14,14 @@ module.exports = {
       return res.redirect('/login');
     return res.render('test');
   },
-  test: function(req, res) {
+  chat: function (req,res) {
+    if(req.isSocket)
+    {
+
+    }
+    return res.render('test/chattest');
+  },
+   chatsocket: function(req, res) {
     var chat = {
       user: ["user1", "user2", "user3"],
       message: [{
@@ -27,14 +34,6 @@ module.exports = {
         message: "somemessage"
       }],
     };
-    console.log("i was here berfore chat creatae");
-    Chat.create(chat).exec(function createCB(err, chat) {
-      if (err) {
-        console.log("Err creating  Chat")
-        return res.send(err);
-      }
-      return res.send("Chat object created" + chat.chatID);
-    });
   },
   //create room through ajax request
   createRoom: function(req, res) {
@@ -47,6 +46,7 @@ module.exports = {
         chatroom.name = room.roomname;
         chatroom.private = Boolean(room.private);
         chatroom.createdBy = user.id;
+        chatroom.users = [user.id];
         console.log(chatroom);
         Chatroom.create(chatroom).exec(function(err, chatroom) {
           if (err) {

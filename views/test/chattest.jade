@@ -1,0 +1,12 @@
+extends ./layouts/plain
+block content-body
+  body
+   .chatbox
+     .boxbody
+       #messages
+     .boxfooter
+      .form#chatform
+        input(type="text" placeholder="Type Message" name="Chat[message]" width="300")
+        button.btn.btn-primary#chatsend Send #[.fa.fa-send]
+   script(src='/plugins/jQuery/jQuery-2.1.4.min.js')
+   script(src="/js/acumen.js")
