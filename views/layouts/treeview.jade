@@ -32,29 +32,29 @@ aside.main-sidebar
           i.fa.fa-angle-left.pull-right
         ul.treeview-menu
           li
+            a(href='/administrator/realtime')
+              i.fa.fa-circle-o
+              |  Real Time Analysis
+          li
+            a(href='/administrator/resource')
+              i.fa.fa-circle-o
+              |  Resource Planing
+          li
+            a(href='/administrator/swot')
+              i.fa.fa-circle-o
+              |  S.W.O.T Analysis
+          li
             a(href='/administrator/skills')
               i.fa.fa-circle-o
-              |  Skills
+              |  Skills Sets
           li
-            a(href='#')
+            a(href='/administrator/notifications')
               i.fa.fa-circle-o
-              |  Icons
+              |  Notifications
           li
-            a(href='#')
-              i.fa.fa-circle-o
-              |  Buttons
-          li
-            a(href='#')
-              i.fa.fa-circle-o
-              |  Sliders
-          li
-            a(href='#')
+            a(href='/administrator/timeline')
               i.fa.fa-circle-o
               |  Timeline
-          li
-            a(href='#')
-              i.fa.fa-circle-o
-              |  Modals
       li.treeview
         a(href='/user')
           i.fa.fa-users
@@ -62,9 +62,25 @@ aside.main-sidebar
           i.fa.fa-angle-left.pull-right
         ul.treeview-menu
           li
-            a(href='/user')
+            a(href='/manage/users')
               i.fa.fa-circle-o
               |  Employees
+          li
+            a(href='/manage/clients')
+              i.fa.fa-circle-o
+              |  Clients
+          li
+            a(href='/manage/contacts')
+              i.fa.fa-circle-o
+              |  Contacts
+          li
+            a(href='/manage/inventory')
+              i.fa.fa-circle-o
+              |  Inventory
+          li
+            a(href='/manage/campaign')
+              i.fa.fa-circle-o
+              |  Campaign
       li
         a(href='/project')
           i.fa.fa-cubes
@@ -79,7 +95,12 @@ aside.main-sidebar
         a(href='/mailbox')
           i.fa.fa-envelope
           span Mailbox
-          small.label.label-default.pull-right 12
+          small.label.bg-teal.pull-right 12
+      li
+        a(href='/chat')
+          i.fa.fa-comments-o
+          span Chat
+          small.label.label-default.pull-right 25
       li
         a(href='/preferences')
           i.fa.fa-gears

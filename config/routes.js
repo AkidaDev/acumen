@@ -1,62 +1,72 @@
 /**
- * Route Mappings
- * (sails.config.routes)
- *
- * Your routes map URLs to views and controllers.
- *
- * If Sails receives a URL that doesn't match any of the routes below,
- * it will check for matching files (images, scripts, stylesheets, etc.)
- * in your assets directory.  e.g. `http://localhost:1337/images/foo.jpg`
- * might match an image file: `/assets/images/foo.jpg`
- *
- * Finally, if those don't match either, the default 404 handler is triggered.
- * See `api/responses/notFound.js` to adjust your app's 404 logic.
- *
- * Note: Sails doesn't ACTUALLY serve stuff from `assets`-- the default Gruntfile in Sails copies
- * flat files from `assets` to `.tmp/public`.  This allows you to do things like compile LESS or
- * CoffeeScript for the front-end.
- *
- * For more information on configuring custom routes, check out:
- * http://sailsjs.org/#!/documentation/concepts/Routes/RouteTargetSyntax.html
- */
+*RouteMappings
+*(sails.config.routes)
+*
+*YourroutesmapURLstoviewsandcontrollers.
+*
+*IfSailsreceivesaURLthatdoesn'tmatchanyoftheroutesbelow,
+*itwillcheckformatchingfiles(images,scripts,stylesheets,etc.)
+*inyourassetsdirectory.e.g.`http://localhost:1337/images/foo.jpg`
+*mightmatchanimagefile:`/assets/images/foo.jpg`
+*
+*Finally,ifthosedon'tmatcheither,thedefault404handleristriggered.
+*See`api/responses/notFound.js`toadjustyourapp's404logic.
+*
+*Note:Sailsdoesn'tACTUALLYservestufffrom`assets`--thedefaultGruntfileinSailscopies
+*flatfilesfrom`assets`to`.tmp/public`.ThisallowsyoutodothingslikecompileLESSor
+*CoffeeScriptforthefront-end.
+*
+*Formoreinformationonconfiguringcustomroutes,checkout:
+*http://sailsjs.org/#!/documentation/concepts/Routes/RouteTargetSyntax.html
+*/
 
-module.exports.routes = {
+module.exports.routes={
 
-  /***************************************************************************
-  *                                                                          *
-  * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
-  * etc. depending on your default view engine) your home page.              *
-  *                                                                          *
-  * (Alternatively, remove this and add an `index.html` file in your         *
-  * `assets` directory)                                                      *
-  *                                                                          *
-  ***************************************************************************/
+/***************************************************************************
+**
+*Maketheviewlocatedat`views/homepage.ejs`(or`views/homepage.jade`,*
+*etc.dependingonyourdefaultviewengine)yourhomepage.*
+**
+*(Alternatively,removethisandaddan`index.html`fileinyour*
+*`assets`directory)*
+**
+***************************************************************************/
 
-  '/': {view: 'dashboard'},
-  '/user':{view: 'manage/employee'},
-  '/user/add':{view: 'manage/employee/add'},
-  '/calendar':{ view:'calendar' },
-  '/mailbox':{ view: 'mailbox/inbox' },
-  '/mailbox/compose':{ view: 'mailbox/compose' },
-  '/mailbox/read':{ view: 'mailbox/read' },
-  '/logout':{view: 'site/logout'},
-  '/register':{view: 'site/register'},
-  '/user-detail':{view: 'manage/employee/details'},
-  '/login': 'PanelController.login',
-  '/logout' : 'PanelController.logout',
-  '/administrator/skills':{view: 'administrator/skills'},
-  '/view-project':{ view: 'project/details' }
-  //'/':{ view },
-  //'/':{ view },
+  '/':{view:'dashboard'},
+  '/calendar':{view:'calendar'},
+  '/logout':{view:'site/logout'},
+  '/register':{view:'site/register'},
+  '/login':'PanelController.login',
+  '/logout':'PanelController.logout',
+  '/view-project':{view:'project/details'},
+  '/user-detail':{view:'manage/employee/details'},
+  '/chat':{view:'chat'},
+  '/mailbox':{view:'mailbox/inbox'},
+  '/mailbox/compose':{view:'mailbox/compose'},
+  '/mailbox/read':{view:'mailbox/read'},
+  '/administrator/realtime':{view:'administrator/realtime'},
+  '/administrator/notifications':{view:'administrator/notifications'},
+  '/administrator/resource':{view:'administrator/resource'},
+  '/administrator/swot':{view:'administrator/swot'},
+  '/administrator/timeline':{view:'administrator/timeline'},
+  '/administrator/skills':{view:'administrator/skills'},
+  '/manage/users':{view:'manage/employee'},
+  '/manage/user/add':{view:'manage/employee/add'},
+  '/manage/contacts':{view:'manage/contacts'},
+  '/manage/clients':{view:'manage/clients'},
+  '/manage/campaign':{view:'manage/campaign'},
+  '/manage/inventory':{view:'manage/inventory'}
+  //'/':{view},
+//'/':{view},
 
-  /***************************************************************************
-  *                                                                          *
-  * Custom routes here...                                                    *
-  *                                                                          *
-  * If a request to a URL doesn't match any of the custom routes above, it   *
-  * is matched against Sails route blueprints. See `config/blueprints.js`    *
-  * for configuration options and examples.                                  *
-  *                                                                          *
-  ***************************************************************************/
+/***************************************************************************
+**
+*Customrouteshere...*
+**
+*IfarequesttoaURLdoesn'tmatchanyofthecustomroutesabove,it*
+*ismatchedagainstSailsrouteblueprints.See`config/blueprints.js`*
+*forconfigurationoptionsandexamples.*
+**
+***************************************************************************/
 
 };

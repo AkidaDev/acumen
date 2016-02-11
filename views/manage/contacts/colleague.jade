@@ -1,0 +1,25 @@
+.box.box-primary
+  .box-header.with-border
+    h3.box-title Data table
+  // /.box-header
+  .box-body
+    table.table.table-hover
+      tr
+        th(style='width: 20px') ID
+        th Projects
+        th Team
+        th(style='width: 20px') Details
+      tr
+        td(style='vertical-align:middle') 186
+        td(style='vertical-align:middle') Update software
+        td
+          img.pic.direct-chat-img(src='/img/user2-160x160.jpg', alt='User Image')
+          img.pic.direct-chat-img(src='/img/user7-128x128.jpg', alt='User Image')
+          img.pic.direct-chat-img(src='/img/user2-160x160.jpg', alt='User Image')
+          img.pic.direct-chat-img(src='/img/user7-128x128.jpg', alt='User Image')
+        td(style='vertical-align:middle')
+          button(onclick="window.location.href='/view-project'").btn.btn-primary.btn-xs
+            i.fa.fa-folder-open
+            |  View
+  // /.box-body
+// /.box
