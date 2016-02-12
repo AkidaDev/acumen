@@ -16,7 +16,7 @@ block content-body
             i.fa.fa-dashboard
             |  Home
         li
-          a(href='/user') Manage Users
+          a(href='/manage/users') Manage Users
         li.active User Details
     // Main content
     section.content
@@ -30,7 +30,7 @@ block content-body
       include ./skillgraph.jade
       .row
         .col-md-6
-          include ./details.jade
+          include ./detail.jade
           include ./progress.jade
         .col-md-6
           include ./onproject.jade
