@@ -40,8 +40,7 @@ module.exports.routes={
   '/logout':'PanelController.logout',
   '/view-project':{view:'project/details'},
   '/user-detail':{view:'manage/employee/details'},
-  'get /chat/:roomid':'ChatController.chat',
-  '/chat/join/:roomid':'ChatController.joinroom',
+
   '/mailbox':{view:'mailbox/inbox'},
   '/mailbox/compose':{view:'mailbox/compose'},
   '/mailbox/read':{view:'mailbox/read'},
