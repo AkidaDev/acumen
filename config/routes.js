@@ -52,6 +52,7 @@ module.exports.routes={
   '/administrator/timeline':{view:'administrator/timeline'},
   '/administrator/skillset':{view:'administrator/skillset'},
   'get /chat/subscribe/:roomid': "ChatController.subscribe",
+  'post /chat/:roomid': "ChatController.test",
   '/manage/users': "UserController.index",
   '/manage/users/details':"UserController.detail",
   '/manage/users/add':{view:'manage/employee/add'},
