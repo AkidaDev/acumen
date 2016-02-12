@@ -39,7 +39,7 @@ module.exports.routes={
   '/login':'PanelController.login',
   '/logout':'PanelController.logout',
   '/view-project':{view:'project/details'},
-  
+
 
   '/mailbox':{view:'mailbox/inbox'},
   '/mailbox/compose':{view:'mailbox/compose'},
@@ -51,7 +51,7 @@ module.exports.routes={
   '/administrator/swot':{view:'administrator/swot'},
   '/administrator/timeline':{view:'administrator/timeline'},
   '/administrator/skillset':{view:'administrator/skillset'},
-
+  'get /chat/subscribe/:roomid': "ChatController.subscribe",
   '/manage/users': "UserController.index",
   '/manage/users/details':"UserController.detail",
   '/manage/users/add':{view:'manage/employee/add'},
