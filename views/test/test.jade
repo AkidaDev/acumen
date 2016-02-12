@@ -1,6 +1,6 @@
 // this is test file for testing and debuing 
 
-extends ./layouts/plain
+extends ./../layouts/plain
 // current testing chat system for user
 block content-body
   body
@@ -10,5 +10,5 @@ block content-body
         input(type="radio" name="Room[private]" value="true")
         input(type="radio" name="Room[private]" value="False")
         button#createroom.btn.btn-default(type="button") Create Room #[.fa.fa-comment]
-   script(src='/plugins/jQuery/jQuery-2.1.4.min.js')
-   script(src="/js/acumen.js")
+    script(src='/plugins/jQuery/jQuery-2.1.4.min.js')
+    script(src="/js/acumen.js")

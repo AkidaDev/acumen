@@ -12,30 +12,27 @@ module.exports = {
   index: function(req, res) {
     if (!req.user)
       return res.redirect('/login');
-    return res.render('test');
+    return res.render('test/test');
   },
-  chat: function (req,res) {
-    if(req.isSocket)
-    {
-
+  chat: function(req, res) {
+    if (req.user) {
+      Chatroom.findOne({
+        id: req.param('roomid')
+      }).exec(function(err, chatroom) {
+        if (err)
+          return res.send(500);
+        if (chatroom === [] || typeof chatroom === 'undefined')
+          res.send(404, "Chatroom not found");
+        if (!chatroom.hasUser(req.user.id))
+          return res.send(403);
+        return res.render('test/chattest', {
+          roomid: chatroom.id
+        });
+      });
+    } else {
+      return res.redirect('/login');
     }
-    return res.render('test/chattest');
   },
-   chatsocket: function(req, res) {
-    var chat = {
-      user: ["user1", "user2", "user3"],
-      message: [{
-        u_id: "someid",
-        time: "sometime",
-        message: "somemessage"
-      }, {
-        u_id: "someid",
-        time: "sometime",
-        message: "somemessage"
-      }],
-    };
-  },
-  //create room through ajax request
   createRoom: function(req, res) {
     if (req.user) {
       var room = req.param('Room');
@@ -47,7 +44,6 @@ module.exports = {
         chatroom.private = Boolean(room.private);
         chatroom.createdBy = user.id;
         chatroom.users = [user.id];
-        console.log(chatroom);
         Chatroom.create(chatroom).exec(function(err, chatroom) {
           if (err) {
             return res.status(500).send(err);
@@ -77,18 +73,35 @@ module.exports = {
       res.redirect('/login');
     }
   },
-  getRooms: function(req, res) {},
+//join Room auth Connect client to broadcasting room
   joinRoom: function(req, res) {
-    if (!req.isSocket)
-      return res.send("Error!! :() only websockets allowed");
-    var roomname = req.param('room');
-    Chatroom.findOne({
-      name: roomname
-    }).exec(function(err, room) {
-      if (err || !room)
-        return res.send('room not found or Deleted!!!')
-      Chatroom.subscribe(req, _.pluck(room, 'id'));
-      res.ok();
-    });
-  }
+  if (!req.isSocket){
+      res.send(403, 'Not a socket');
+    }
+    console.log('inside joinroom');
+      Chatroom.findOne({
+        id: req.param('roomid')
+      }).exec(function(err, chatroom) {
+        if (err)
+          return res.send(500);
+        if (chatroom === [] || typeof chatroom === 'undefined')
+          res.send(404, "Chatroom not found");
+        if (!chatroom.hasUser(req.user.id))
+          return res.send(403);
+        console.log("Just before socket join");
+        sails.sockets.join(req, chatroom.id, function(err) {
+          console.log('Error: ' + err);
+          if (err) {
+            return res.serverError(err);
+          }
+          console.log('message:' + req.user.username + 'has join room');
+          console.log("roomid: " + chatroom.id);
+          console.log("roomid: " + chatroom.name);
+        });
+        return res.render('test/chattest', {
+          roomid: chatroom.id
+        });
+      });
+  },
+  getRooms: function(req, res) {},
 };
