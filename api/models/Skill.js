@@ -9,6 +9,6 @@ module.exports = {
 
   attributes: {
     name: {type:"string", required:"true"},
-    skillgroup: { model:"skillgroup", required:true},
+    //skillgroup: { model:"skillgroup", required:true},
   }
 };

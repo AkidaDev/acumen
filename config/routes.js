@@ -40,7 +40,8 @@ module.exports.routes={
   '/logout':'PanelController.logout',
   '/view-project':{view:'project/details'},
   '/user-detail':{view:'manage/employee/details'},
-  '/chat':{view:'chat'},
+  'get /chat/:roomid':'ChatController.chat',
+  '/chat/join/:roomid':'ChatController.joinroom',
   '/mailbox':{view:'mailbox/inbox'},
   '/mailbox/compose':{view:'mailbox/compose'},
   '/mailbox/read':{view:'mailbox/read'},
@@ -63,9 +64,9 @@ module.exports.routes={
 **
 *Customrouteshere...*
 **
-*IfarequesttoaURLdoesn'tmatchanyofthecustomroutesabove,it*
-*ismatchedagainstSailsrouteblueprints.See`config/blueprints.js`*
-*forconfigurationoptionsandexamples.*
+*If are quest to a URL doesn't match any of the custom routes above, it*
+*is matched against Sails route blueprints.See`config/blueprints.js`*
+*forconfigurationoptionsand examples.*
 **
 ***************************************************************************/
 
