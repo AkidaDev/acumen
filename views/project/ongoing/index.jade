@@ -1,4 +1,4 @@
-extends ./../layouts/main
+extends ./../../layouts/main
 block append mainhead
   // DataTables
   link(rel='stylesheet', href='/plugins/datatables/dataTables.bootstrap.css')
@@ -23,8 +23,6 @@ block content-body
         ul.nav.nav-tabs
           li.active
             a(href='#tab_1', data-toggle='tab') Ongoing
-          li
-            a(href='#tab_2', data-toggle='tab') Completed
           li.pull-right
             button(onclick="window.location.href='#'").btn.btn-primary
               i.fa.fa-plus 
@@ -34,8 +32,6 @@ block content-body
             include ./ongoing.jade
             // /.box
           // /.tab-pane
-          #tab_2.tab-pane
-            include ./completed.jade
             // /.box
           // /.tab-pane
         // /.tab-content

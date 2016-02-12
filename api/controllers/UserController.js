@@ -7,6 +7,9 @@
 
 module.exports = {
 	index:function (req,res) {
-		res.render('manage/employee')
+		return res.render('manage/employee');
+	},
+	detail: function (req,res) {
+		return res.render('manage/employee/details');
 	}
 };

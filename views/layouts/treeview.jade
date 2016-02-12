@@ -44,7 +44,7 @@ aside.main-sidebar
               i.fa.fa-circle-o
               |  S.W.O.T Analysis
           li
-            a(href='/administrator/skills')
+            a(href='/administrator/skillset')
               i.fa.fa-circle-o
               |  Skills Sets
           li
@@ -56,8 +56,8 @@ aside.main-sidebar
               i.fa.fa-circle-o
               |  Timeline
       li.treeview
-        a(href='/user')
-          i.fa.fa-users
+        a(href='#')
+          i.fa.fa-sitemap
           span Manage
           i.fa.fa-angle-left.pull-right
         ul.treeview-menu
@@ -81,11 +81,21 @@ aside.main-sidebar
             a(href='/manage/campaign')
               i.fa.fa-circle-o
               |  Campaign
-      li
-        a(href='/project')
+      li.treeview
+        a(href='#')
           i.fa.fa-cubes
           span Projects
-          small.label.label-primary.pull-right new
+          i.fa.fa-angle-left.pull-right
+        ul.treeview-menu  
+          li
+            a(href='/project/ongoing')
+              i.fa.fa-circle-o
+              |  Ongoing
+              small.label.bg-purple.pull-right new
+          li
+            a(href='/project/completed')
+              i.fa.fa-circle-o
+              |  Completed
       li
         a(href='/calendar')
           i.fa.fa-calendar

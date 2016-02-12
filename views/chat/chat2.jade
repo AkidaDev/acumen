@@ -1,13 +1,23 @@
 // DIRECT CHAT PRIMARY
 .box.box-solid.box-info.direct-chat.direct-chat-primary.collapsed-box
   .box-header.with-border
-    h3.box-title Direct Chat Name
+    h3.box-title Chat Group name
     .box-tools.pull-right
       span.badge.bg-light-blue(data-toggle='tooltip', title='3 New Messages') 3
       button.btn.btn-box-tool(data-widget='collapse')
         i.fa.fa-plus
-      button.btn.btn-box-tool(data-toggle='tooltip', title='Contacts', data-widget='chat-pane-toggle')
-        i.fa.fa-comments
+      button.btn.btn-box-tool.dropdown-toggle(type='button', data-toggle='dropdown')
+        span.fa.fa-gear
+      ul.dropdown-menu
+        li
+          a(href='#', style='color:gray', data-widget='chat-pane-toggle') Participants
+        li
+          a(href='#', style='color:gray') Add Member
+        li
+          a(href='#', style='color:gray') Notifications
+        li.divider
+        li
+          a(href='#', style='color:gray') Group Info 
       button.btn.btn-box-tool(data-widget='remove')
         i.fa.fa-times
   // /.box-header
@@ -42,6 +52,10 @@
     // Contacts are loaded here
     .direct-chat-contacts
       ul.contacts-list
+        li
+          button.btn.btn-default.btn-xs.pull-right(type='button', data-widget='chat-pane-toggle')
+            i.fa.fa-arrow-circle-right
+            |  Back
         li
           a(href='#')
             img.contacts-list-img(src='/img/user1-128x128.jpg')

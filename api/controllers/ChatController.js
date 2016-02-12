@@ -12,7 +12,7 @@ module.exports = {
   index: function(req, res) {
     if (!req.user)
       return res.redirect('/login');
-    return res.render('test/test');
+    return res.render('chat');
   },
   chat: function(req, res) {
     if (req.user) {

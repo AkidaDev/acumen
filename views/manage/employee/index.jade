@@ -16,7 +16,7 @@ block content-body
             i.fa.fa-dashboard
             |  Home
         li
-          a(href='/user') Manage Users
+          a(href='#') Manage
         li.active Users
     // Main content
     section.content
@@ -26,7 +26,7 @@ block content-body
           li.active
             a(href='#tab_1', data-toggle='tab') Employees
           li.pull-right
-            button(onclick="window.location.href='/manage/user/add'").btn.btn-primary
+            button(onclick="window.location.href='/manage/users/add'").btn.btn-primary
               i.fa.fa-plus 
               |  New User
         .tab-content
@@ -50,7 +50,7 @@ block content-body
                     tr
                       td 183
                       td 
-                        a(href='/user-detail') John Doe
+                        a(href='/manage/users/details') John Doe
                       td 11-7-2014
                       td
                         span.label.label-success Approved
@@ -64,7 +64,7 @@ block content-body
                     tr
                       td 219
                       td 
-                        a(href='/user-detail') Alexander Pierce
+                        a(href='/manage/users/details') Alexander Pierce
                       td 11-7-2014
                       td
                         span.label.label-warning Pending
@@ -78,7 +78,7 @@ block content-body
                     tr
                       td 657
                       td 
-                        a(href='/user-detail') Bob Doe
+                        a(href='/manage/users/details') Bob Doe
                       td 11-7-2014
                       td
                         span.label.label-primary Approved
@@ -92,7 +92,7 @@ block content-body
                     tr
                       td 175
                       td 
-                        a(href='/user-detail') Mike Doe
+                        a(href='/manage/users/details') Mike Doe
                       td 11-7-2014
                       td
                         span.label.label-danger Denied
