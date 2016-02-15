@@ -27,7 +27,7 @@ module.exports = {
         if (err)
           return res.send(500);
         if (chatroom === [] || typeof chatroom === 'undefined')
-          res.send(404, "Chatroom not found");
+          return res.send(404, "Chatroom not found");
         if (!chatroom.hasUser(req.user.id))
           return res.send(403);
 					console.log(req.user.username +" subscribe " + chatroom.name);
@@ -36,6 +36,7 @@ module.exports = {
 						Chat.subscribe(req,chat.id);
 					});
         });
+			return res.ok();	
 	},
 	//this is test
 	test: function (req,res) {
