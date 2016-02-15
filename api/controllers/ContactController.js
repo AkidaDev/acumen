@@ -11,7 +11,6 @@ module.exports = {
 			return res.redirect('login');
 	 Contact.find({uid: req.user.id}).exec(function (err, contact) {
 	 	// TODO: convert result to json
-
 	 });
 	},
 };

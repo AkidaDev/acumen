@@ -13,7 +13,7 @@ module.exports = {
     acumenuid:{type:"string"},
     phoneno:{type:"string"},
     name:{type:"string"},
-    address:{type:"string"},
+    adress:{type:"string"},
     state:{type:"string"},
     city:{type:"string"},
     country:{type:"string"},
@@ -22,10 +22,10 @@ module.exports = {
   beforeCreate: function (contact,cb) {
     if(contact.type !== "acumen")
     {
-      if(typeof contact.phoneno === 'undefine' || typeof contact.name === 'undefine' || typeof contact.address === 'undefine' || typeof contact.state === 'undefine' || typeof contact.city === 'undefine' || typeof contact.country === 'undefine' || typeof contact.pincode === 'undefine' )
+      if(typeof contact.phoneno === 'undefined' || typeof contact.name === 'undefined' || typeof contact.adress === 'undefined' || typeof contact.state === 'undefined' || typeof contact.city === 'undefined' || typeof contact.country === 'undefined' || typeof contact.pincode === 'undefined' )
         return cb(new Error('Please Check all values'))
     }else{
-      if(typeof contact.acumen === 'undefine')
+      if(typeof contact.acumen === 'undefined')
       return cb(new Error('Error: not a valid user id'));
     }
     cb(null,contact);

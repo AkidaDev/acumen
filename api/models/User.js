@@ -12,7 +12,7 @@ module.exports = {
     lname:{type: "string", required: true},
     username:{ type: 'string', required: true, unique: true },
     online:{type:"boolean", defaultTo:'false'},
-    //pimg:{type:'string', required: true,unique: true},
+    pimg:{type:'string', required: true,unique: true},
     password:{ type: 'string', required: true },
     email:{ type: 'email', required:true },
     country:{type:'string', required:false},

@@ -102,6 +102,7 @@ module.exports = {
 				city: "New Delhi",
 				dob: '12/12/2014',
 				phoneno: "999000xxxx",
+				pimg: 'user6-128x128.jpg',
 			},
 			2: {
 				username: "pankaj",
@@ -115,6 +116,7 @@ module.exports = {
 				city: "New Delhi",
 				dob: '12/12/2015',
 				phoneno: "99900xxxxx",
+				pimg: 'user6-128x128.jpg',
 			},
 			3: {
 				username: "Alishan",
@@ -128,6 +130,7 @@ module.exports = {
 				city: "New Delhi",
 				dob: '12/12/2014',
 				phoneno: "999000xxxx",
+				pimg: 'user6-128x128.jpg',
 			},
 			4: {
 				username: "Ataullah",
@@ -141,6 +144,7 @@ module.exports = {
 				city: "New Delhi",
 				dob: '12/12/2014',
 				phoneno: "999000xxxw",
+				pimg: 'user6-128x128.jpg',
 			},
 		};
 		console.log(users);
@@ -154,4 +158,5 @@ module.exports = {
 				});
 			}
 	}
+	};
 };
