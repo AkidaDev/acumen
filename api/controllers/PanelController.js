@@ -157,6 +157,5 @@ module.exports = {
 						console.log(created);
 				});
 			}
-	}
-	};
+	},
 };
