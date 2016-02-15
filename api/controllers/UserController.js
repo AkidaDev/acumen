@@ -11,5 +11,8 @@ module.exports = {
 	},
 	detail: function (req,res) {
 		return res.render('manage/employee/details');
-	}
+	},
+	add: function (req,res) {
+		return res.render('manage/employee/add');
+	},
 };

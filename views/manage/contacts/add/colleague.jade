@@ -1,0 +1,21 @@
+.box-header.with-border
+  h3.box-title Details
+  // /.box-header
+.row.row-centered
+  br
+  .col-xs-6.col-centered(style='vertical-align: middle')
+    form.form-horizontal
+      .box-body
+        .form-group
+          label.col-sm-2.control-label(for='inputUsername') User Name
+          .col-sm-10
+            input#inputEmail.form-control(type='text', placeholder='User Name')
+        .form-group
+          .col-sm-offset-2.col-sm-10
+            button.btn.btn-default(type="submit") Add User
+      // /.box-body
+      .box-footer
+        button.btn.btn-default(type='submit') Cancel
+        button.btn.btn-info.pull-right(type='submit') Save
+      // /.box-footer
+      // /.box

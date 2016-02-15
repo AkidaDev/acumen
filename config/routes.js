@@ -55,8 +55,9 @@ module.exports.routes={
   'post /chat/:roomid': "ChatController.test",
   '/manage/users': "UserController.index",
   '/manage/users/details':"UserController.detail",
-  '/manage/users/add':{view:'manage/employee/add'},
+  '/manage/users/add':"UserController.add",
   '/manage/contacts':"ContactController.index",
+  '/manage/contacts/add':"ContactController.add",
   '/manage/clients':{view:'manage/clients'},
   '/manage/campaign':{view:'manage/campaign'},
   '/manage/inventory':{view:'manage/inventory'}

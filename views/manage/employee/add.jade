@@ -5,23 +5,23 @@ block content-body
     // Content Header (Page header)
     section.content-header
       h1
-        | Add User
-        small Control panel
+        | User
+        small New
       ol.breadcrumb
         li
           a(href='/')
             i.fa.fa-dashboard
             |  Home
         li
-          a(href='/user') Manage Users
+          a(href='/manage/users') Users
         li.active Add User
     // Main content
     section.content
       // Info boxes
       // Horizontal Form
-      .box.box-info
+      .box.box-solid
         .box-header.with-border
-          h3.box-title Add New User
+          h3.box-title Details
         // /.box-header
         // form start
           if error
