@@ -11,6 +11,7 @@ module.exports = {
     fname:{type: "string", required: true},
     lname:{type: "string", required: true},
     username:{ type: 'string', required: true, unique: true },
+    online:{type:"boolean", defaultTo:'false'},
     //pimg:{type:'string', required: true,unique: true},
     password:{ type: 'string', required: true },
     email:{ type: 'email', required:true },
@@ -31,6 +32,7 @@ module.exports = {
       delete obj.password;
       return obj;
     },
+    contacts:{required:true},
   },
   beforeCreate: function (user, cb) {
     var bcrypt = require('bcrypt');

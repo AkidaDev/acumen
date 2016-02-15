@@ -45,24 +45,23 @@ module.exports.routes={
   '/mailbox/compose':{view:'mailbox/compose'},
   '/mailbox/read':{view:'mailbox/read'},
 
-  '/administrator/realtime':{view:'administrator/realtime'},
-  '/administrator/notifications':{view:'administrator/notifications'},
-  '/administrator/resource':{view:'administrator/resource'},
-  '/administrator/swot':{view:'administrator/swot'},
-  '/administrator/timeline':{view:'administrator/timeline'},
-  '/administrator/skillset':{view:'administrator/skillset'},
+  '/administrator/realtime': {view:'administrator/realtime'},
+  '/administrator/notifications': {view:'administrator/notifications'},
+  '/administrator/resource': {view:'administrator/resource'},
+  '/administrator/swot': {view:'administrator/swot'},
+  '/administrator/timeline': {view:'administrator/timeline'},
+  '/administrator/skillset': {view:'administrator/skillset'},
   'get /chat/subscribe/:roomid': "ChatController.subscribe",
   'post /chat/:roomid': "ChatController.test",
   '/manage/users': "UserController.index",
   '/manage/users/details':"UserController.detail",
   '/manage/users/add':{view:'manage/employee/add'},
-  '/manage/contacts':{view:'manage/contacts'},
+  '/manage/contacts':"ContactController.index",
   '/manage/clients':{view:'manage/clients'},
   '/manage/campaign':{view:'manage/campaign'},
   '/manage/inventory':{view:'manage/inventory'}
   //'/':{view},
 //'/':{view},
-
 /***************************************************************************
 **
 *Customrouteshere...*
@@ -72,5 +71,4 @@ module.exports.routes={
 *forconfigurationoptionsand examples.*
 **
 ***************************************************************************/
-
 };

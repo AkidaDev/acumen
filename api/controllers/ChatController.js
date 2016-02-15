@@ -61,14 +61,14 @@ module.exports = {
 						}
 						console.log(chat.id);
 						console.log(chatroom.id);
-						Chat.update({id: chat.id},{message: body.message}).exec(function (err, updated) {
+						Chat.update({id: chat.id},{message: message}).exec(function (err, updated) {
 
 							if(err)
 							{
 								console.log(err);
 								return res.send(500);
 							}
-							console.log(updated.id);
+							console.log(updated);
 								Chat.message(chat.id, {message: body.message, user: req.user.username});
 								return res.ok();
 							});
