@@ -18,6 +18,7 @@ module.exports = {
     city:{type:"string"},
     country:{type:"string"},
     pincode:{type:"string"},
+    company:{type:"string"},
   },
   beforeCreate: function (contact,cb) {
     if(contact.type !== "acumen")
