@@ -1,4 +1,7 @@
 extends ./../../layouts/main.jade
+block append mainhead
+  // DataTables
+  link(rel='stylesheet', href='/plugins/datatables/dataTables.bootstrap.css')
 block content-body
   // Content Wrapper. Contains page content
   .content-wrapper
@@ -23,9 +26,10 @@ block content-body
           li
             a(href='#client', data-toggle='tab') Client
           li.pull-right
-            button(onclick="window.location.href='/manage/contacts/add'").btn.btn-primary
+            button.btn.btn-primary(type='button', data-toggle='modal', data-target='.addcontact')
               i.fa.fa-plus 
               |  New Contact 
+        include ./add.jade
         .tab-content
           #colleague.active.tab-pane
             // Project Description
@@ -34,3 +38,9 @@ block content-body
           #client.tab-pane
             // The Team Role
             include ./client.jade
+block append bootscript
+  // Datatable 
+  script(src='/plugins/datatables/jquery.dataTables.min.js')
+  script(src='/plugins/datatables/dataTables.bootstrap.min.js')
+  // data table properties
+  script(src='/js/datatable.js')

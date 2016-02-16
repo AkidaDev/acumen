@@ -1,0 +1,48 @@
+extends ./../../../layouts/main
+block append mainhead
+  // Select2
+  link(rel='stylesheet', href='/plugins/select2/select2.min.css')
+block content-body
+  // Content Wrapper. Contains page content
+  .content-wrapper
+    // Content Header (Page header)
+    section.content-header
+      h1
+        | Employee
+        small New
+      ol.breadcrumb
+        li
+          a(href='/')
+            i.fa.fa-dashboard
+            |  Home
+        li
+          a(href='/manage/users') Users
+        li.active Add User
+    // Main content
+    section.content
+      // Custom Tabs
+      .nav-tabs-custom
+        ul.nav.nav-tabs
+          li.active
+            a(href='#tab_1', data-toggle='tab') Employee
+          li.pull-right
+            a.text-muted(href='#')
+              i.fa.fa-gear
+        .tab-content
+          #tab_1.tab-pane.active
+            include ./employee.jade
+          // /.tab-pane
+        // /.tab-content
+      // nav-tabs-custom
+    // /.content
+    // body end here              
+block append bootscript
+  // Select2
+  script(src='/plugins/select2/select2.full.min.js')
+  // InputMask 
+  script(src='/plugins/input-mask/jquery.inputmask.js')
+  script(src='/plugins/input-mask/jquery.inputmask.date.extensions.js')
+  // select2 js for input mask
+  script(src='/js/select2.js')
+  // for Browser file from the Computer
+  script(src='/js/browsefile.js')

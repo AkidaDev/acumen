@@ -1,2 +1,39 @@
-extends ./../../layouts/main
+extends ./../../layouts/main.jade
+block append mainhead
+  // DataTables
+  link(rel='stylesheet', href='/plugins/datatables/dataTables.bootstrap.css')
 block content-body
+  // Content Wrapper. Contains page content
+  .content-wrapper
+    // Content Header (Page header)
+    section.content-header
+      h1
+        | Clients
+        small Details
+      ol.breadcrumb
+        li
+          a(href='/')
+            i.fa.fa-dashboard
+            |  Home
+        li.active Clients
+    // Main content
+    section.content
+      // Your Page Content Here
+      .nav-tabs-custom
+        ul.nav.nav-tabs
+          li.active
+            a(href='#client', data-toggle='tab') Client
+          li.pull-right
+            button(onclick="window.location.href='/manage/clients/add'").btn.btn-primary
+              i.fa.fa-plus 
+              |  New Client 
+        .tab-content
+          #client.active.tab-pane
+            // The Team Role
+            include ./client.jade
+block append bootscript
+  // Datatable 
+  script(src='/plugins/datatables/jquery.dataTables.min.js')
+  script(src='/plugins/datatables/dataTables.bootstrap.min.js')
+  // data table properties
+  script(src='/js/datatable.js')

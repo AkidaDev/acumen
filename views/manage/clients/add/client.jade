@@ -1,0 +1,108 @@
+.box-header.with-border
+  h3.box-title Details
+  // /.box-header
+.box-body  
+  .row.row-centered
+    br
+    .col-md-3.col-centered(style='vertical-align: middle')
+      .box-body.box-profile
+        img.profile-user-img.img-responsive.img-circle(src='/img/default-50x50.gif', alt='User profile picture')
+        h3.profile-username.text-center Nina Mcintire
+      .row.row-centered
+        .input-group
+          span.input-group-btn
+            span.btn.btn-primary.btn-file
+              | Browse… 
+              input(type='file', accept='image/*')
+          input.form-control(type='text', readonly='')
+        span.help-block
+          | feedback "Define the image size"
+        // /.description-block
+      // /.col
+    .col-xs-6.col-centered(style='vertical-align: middle')
+      form.form-horizontal
+        .box-body
+          .form-group
+            label.col-sm-2.control-label(for='inputUsername') User Name
+            .col-sm-10
+              input#inputUsername.form-control(type='text', placeholder='User Name')
+          .form-group
+            label.col-sm-2.control-label(for='inputFirstName') Name
+            .col-sm-5
+              input#inputFirstName.form-control(type='text', placeholder='First')
+            .col-sm-5
+              input#inputName.form-control(type='text', placeholder='Last')
+          .form-group
+            label.col-sm-2.control-label(for='inputEmail') Email
+            .col-sm-10
+              input#inputEmail.form-control(type='email', placeholder='Email Id')
+          .form-group
+            label.col-sm-2.control-label(for='FirmName') Firm
+            .col-sm-10
+              input#FirmName.form-control(type='text', placeholder='Company Name')
+          .form-group    
+            label.col-sm-2.control-label(for='FirmAddress') Address
+            .col-sm-10
+              input#FirmAddress.form-control(type='text', placeholder='Registered Address')
+          .form-group
+            label.col-sm-2.control-label(for='inputCity') City
+            .col-sm-4
+              select.form-control.select2
+                option Alaska
+                option California
+                option Delaware
+                option Tennessee
+                option Texas
+                option Washington
+            label.col-sm-2.control-label(for='inputState') State
+            .col-sm-4
+              select.form-control.select2
+                option Alabama
+                option Alaska
+                option California
+                option Delaware
+                option Tennessee
+                option Texas
+                option Washington
+            // /.input group
+          .form-group
+            label.col-sm-2.control-label(for='inputCountry') Country
+            .col-sm-4
+              select.form-control.select2
+                option Alabama
+                option Alaska
+                option California
+                option Delaware
+                option Tennessee
+                option Texas
+                option Washington
+              // /.input group
+              // phone mask
+            label.col-sm-2.control-label(for='inputContact') Contact
+            .col-sm-4
+              .input-group
+                .input-group-addon
+                  i.fa.fa-phone
+                input.form-control(type='text', data-inputmask='"mask": "(999) 999-9999"', data-mask='')
+              // /.form group
+          // /.form group
+          .form-group
+            label.col-sm-2.control-label(for='inputExtraNotes') Extras
+            .col-sm-10
+              textarea#inputExtraNotes.form-control(placeholder='Notes .....')
+          .form-group
+            .col-sm-offset-2.col-sm-10
+              .checkbox
+                label
+                  input(type='checkbox')
+                  |  I agree to the 
+                  a(href='#') terms and conditions
+          .form-group
+            .col-sm-offset-2.col-sm-10
+              button.btn.btn-default(type="button") Add Client
+          // /.box-body
+.box-footer
+  button.btn.btn-default(type='submit') Cancel
+  button.btn.btn-primary.pull-right(type='submit') Save
+        // /.box-footer
+        // /.box

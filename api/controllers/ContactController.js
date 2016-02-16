@@ -9,8 +9,9 @@ module.exports = {
 	index: function (req,res) {
 		if(!req.user)
 			return res.redirect('login');
-	 Contact.find({uid: req.user.id}).exec(function (err, contact) {
-	 	// TODO: convert result to json
-	 });
+	//  Contact.find({uid: req.user.id}).exec(function (err, contact) {
+	//  	// TODO: convert result to json
+	//  });
+	return res.render('manage/contacts');
 	},
 };
