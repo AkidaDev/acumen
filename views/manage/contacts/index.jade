@@ -26,9 +26,9 @@ block content-body
           li
             a(href='#client', data-toggle='tab') Client
           li.pull-right
-            button.btn.btn-primary(type='button', data-toggle='modal', data-target='.addcontact')
-              i.fa.fa-plus 
-              |  New Contact 
+            button(type='button', data-toggle='modal', data-target='.addcontact').btn.bg-teal
+              i.margin-r-5.fa.fa-plus-circle 
+              |  New
         include ./add.jade
         .tab-content
           #colleague.active.tab-pane

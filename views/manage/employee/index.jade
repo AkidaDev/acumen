@@ -24,9 +24,9 @@ block content-body
           li.active
             a(href='#tab_1', data-toggle='tab') Employees
           li.pull-right
-            button(onclick="window.location.href='/manage/users/add'").btn.btn-primary
-              i.fa.fa-plus 
-              |  New User
+            button(onclick="window.location.href='/manage/users/add'").btn.bg-teal
+              i.margin-r-5.fa.fa-plus-circle 
+              |  New
         .tab-content
           #tab_1.tab-pane.active
             include ./employee.jade
