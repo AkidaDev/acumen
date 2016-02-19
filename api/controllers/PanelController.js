@@ -13,10 +13,6 @@ module.exports = {
 		 res.render('dashboard',{});
 	 },
   login: function (req, res) {
-		if(req.user)
-		{
-			res.redirect('/panel');
-		}
 			if(req.body)
 			{
 				passport.authenticate('local', function(err, user, info) {
@@ -52,8 +48,7 @@ module.exports = {
    * `PanelController.register()`
    */
   register: function (req, res) {
-		if(!req.user)
-		{
+
 			if(req.body)
 			{
 				var qs = require('qs');
@@ -75,9 +70,7 @@ module.exports = {
 					res.render('site/register',{});
 				}
 			}else	res.render('site/register',{});
-		}else{
-			res.redirect('/panel');
-		}
+	
   },
   /**
    * `PanelController.logout()`

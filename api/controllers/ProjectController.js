@@ -6,7 +6,7 @@
  */
 module.exports = {
 	index: function (req,res) {
-		return res.send('hey');
+		
 	},
 	ongoing:function (req,res) {
 		return res.render('project/ongoing',{});

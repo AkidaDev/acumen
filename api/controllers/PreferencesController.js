@@ -6,8 +6,7 @@
  */
 module.exports = {
  index: function (req,res) {
- 	if(req.user){
-		var u = req.user;
+	var u = req.user;
 		User.findOne({username: u.username}).exec(function findOneCB(err,user) {
       if(err)
       {
@@ -15,8 +14,5 @@ module.exports = {
       }
       return res.render('preferences',{user: user});
 		});
-	}else{
-		return res.redirect('/login');
-	}
  }
 };

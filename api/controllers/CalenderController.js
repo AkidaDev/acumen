@@ -6,10 +6,7 @@
  */
 
 module.exports = {
-	
-
-
-  /**
+	  /**
    * `CalenderController.index()`
    */
   index: function (req, res) {
@@ -18,4 +15,3 @@ module.exports = {
     });
   }
 };
-

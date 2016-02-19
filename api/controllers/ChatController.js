@@ -7,19 +7,11 @@
 
 module.exports = {
 	index: function (req, res) {
-		if(!req.user)
-		{
-			return res.redirect('/login');
-		}
-		return res.render('test/chattest', {
+			return res.render('test/chattest', {
 		          roomid: '56bdb52a36e8932026032dcc'//chatroom.id
 		        });
 	},
 	subscribe: function (req,res) {
-		if(!req.user)
-		{
-			return res.redirect('/login');
-		}
 		console.log('inside subscribe');
 		Chatroom.findOne({
         id: req.param('roomid')
@@ -36,7 +28,7 @@ module.exports = {
 						Chat.subscribe(req,chat.id);
 					});
         });
-			return res.ok();	
+			return res.ok();
 	},
 	//this is test
 	test: function (req,res) {
