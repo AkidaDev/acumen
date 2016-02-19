@@ -13,8 +13,10 @@ module.exports = {
 		 res.render('dashboard',{});
 	 },
   login: function (req, res) {
-		if(!req.user)
+		if(req.user)
 		{
+			res.redirect('/panel');
+		}
 			if(req.body)
 			{
 				passport.authenticate('local', function(err, user, info) {
@@ -44,9 +46,7 @@ module.exports = {
 			}else {
 				res.render('site/login');
 			}
-		}else{
-			res.redirect('/panel');
-		}
+
   },
   /**
    * `PanelController.register()`
@@ -83,9 +83,8 @@ module.exports = {
    * `PanelController.logout()`
    */
   logout: function (req, res) {
-    return res.json({
-      todo: 'logout() is not implemented yet!'
-    });
+		req.logout();
+    return res.redirect('login');
   },
 	generate: function (req,res) {
 		console.log("here");

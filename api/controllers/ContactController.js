@@ -17,6 +17,7 @@ module.exports = {
  add: function (req,res) {
 	 if(!req.user)
 			return res.redirect('login');
+	
 	return res.render('manage/contacts/add/');
  }
 };

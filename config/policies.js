@@ -51,6 +51,11 @@ module.exports.policies = {
   '*': [
         passport.initialize(),
         // Use Passport's built-in sessions
-        passport.session()
-  ]
+        passport.session(),
+        'isLoggedIn'
+  ],
+  PanelController: {
+    'login' : [ passport.initialize(),passport.session()],
+  }
+
 };

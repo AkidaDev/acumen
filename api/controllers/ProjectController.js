@@ -6,8 +6,7 @@
  */
 module.exports = {
 	index: function (req,res) {
-		if(!res.user)
-			return res.redirect("login");
+		return res.send('hey');
 	},
 	ongoing:function (req,res) {
 		return res.render('project/ongoing',{});
