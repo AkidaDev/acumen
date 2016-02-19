@@ -57,6 +57,7 @@ module.exports.routes={
   '/manage/users/details':"UserController.detail",
   '/manage/users/add':"UserController.add",
   '/manage/contacts':"ContactController.index",
+  '/manage/contacts/add':"ContactController.add",
   '/manage/clients':"ClientController.index",
   '/manage/clients/details':"ClientController.detail",
   '/manage/clients/add':"ClientController.add",

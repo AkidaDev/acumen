@@ -14,4 +14,9 @@ module.exports = {
 	//  });
 	return res.render('manage/contacts');
 	},
+ add: function (req,res) {
+	 if(!req.user)
+			return res.redirect('login');
+
+ }
 };
