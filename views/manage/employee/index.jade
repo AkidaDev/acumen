@@ -24,86 +24,12 @@ block content-body
           li.active
             a(href='#tab_1', data-toggle='tab') Employees
           li.pull-right
-            button(onclick="window.location.href='/manage/users/add'").btn.btn-primary
-              i.fa.fa-plus 
-              |  New User
+            button(onclick="window.location.href='/manage/users/add'").btn.bg-teal
+              i.margin-r-5.fa.fa-plus-circle 
+              |  New
         .tab-content
           #tab_1.tab-pane.active
-            .box.box-primary
-              .box-header
-                h3.box-title Overview Data Table
-              // /.box-header
-              .box-body
-                table.example.table.table-bordered.table-striped
-                  thead
-                    tr
-                      th ID
-                      th User
-                      th Date
-                      th Status
-                      th Reason
-                      th Edit
-                      th Delete
-                  tbody
-                    tr
-                      td 183
-                      td 
-                        a(href='/manage/users/details') John Doe
-                      td 11-7-2014
-                      td
-                        span.label.label-success Approved
-                      td Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.
-                      td
-                        .tools
-                          i.fa.fa-pencil
-                      td
-                        .tools
-                          i.fa.fa-trash-o
-                    tr
-                      td 219
-                      td 
-                        a(href='/manage/users/details') Alexander Pierce
-                      td 11-7-2014
-                      td
-                        span.label.label-warning Pending
-                      td Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.
-                      td
-                        .tools
-                          i.fa.fa-pencil
-                      td
-                        .tools
-                          i.fa.fa-trash-o
-                    tr
-                      td 657
-                      td 
-                        a(href='/manage/users/details') Bob Doe
-                      td 11-7-2014
-                      td
-                        span.label.label-primary Approved
-                      td Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.
-                      td
-                        .tools
-                          i.fa.fa-pencil
-                      td
-                        .tools
-                          i.fa.fa-trash-o
-                    tr
-                      td 175
-                      td 
-                        a(href='/manage/users/details') Mike Doe
-                      td 11-7-2014
-                      td
-                        span.label.label-danger Denied
-                      td Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.
-                      td
-                        .tools
-                          i.fa.fa-pencil
-                      td
-                        .tools
-                          i.fa.fa-trash-o
-                // /.box-body
-              // /.box
-            // /.content
+            include ./employee.jade
           // /.content-wrapper
 block append bootscript
   // Datatable 

@@ -1,0 +1,81 @@
+.modal.fade.addskill(tabindex='-1', role='dialog', aria-labelledby='gridSystemModalLabel')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+        h4#gridSystemModalLabel.modal-title Create New
+      .modal-body
+        .box.box-solid
+          .box-header.with-border
+            h3.box-title Skill Set
+          form.form-horizontal
+            .box-body
+              label.control-label(for='inputname') Name
+              input#inputName.form-control(type='text', placeholder='Enter...')
+            // /.box-body
+          .box-body
+            .btn-group(style='width: 100%; margin-bottom: 10px;')
+              // <button type="button" id="color-chooser-btn" class="btn btn-info btn-block dropdown-toggle" data-toggle="dropdown">Color <span class="caret"></span></button>
+              ul#color-chooser.fc-color-picker
+                li
+                  a.text-aqua(href='#')
+                    i.fa.fa-square
+                li
+                  a.text-blue(href='#')
+                    i.fa.fa-square
+                li
+                  a.text-light-blue(href='#')
+                    i.fa.fa-square
+                li
+                  a.text-teal(href='#')
+                    i.fa.fa-square
+                li
+                  a.text-yellow(href='#')
+                    i.fa.fa-square
+                li
+                  a.text-orange(href='#')
+                    i.fa.fa-square
+                li
+                  a.text-green(href='#')
+                    i.fa.fa-square
+                li
+                  a.text-lime(href='#')
+                    i.fa.fa-square
+                li
+                  a.text-red(href='#')
+                    i.fa.fa-square
+                li
+                  a.text-purple(href='#')
+                    i.fa.fa-square
+                li
+                  a.text-fuchsia(href='#')
+                    i.fa.fa-square
+                li
+                  a.text-muted(href='#')
+                    i.fa.fa-square
+                li
+                  a.text-navy(href='#')
+                    i.fa.fa-square
+            // /btn-group
+            .input-group
+              input#new-event.form-control(type='text', placeholder='Skill Name')
+              .input-group-btn
+                button#add-new-event.btn.btn-primary.btn-flat(type='button') Add
+              // /btn-group
+            // /input-group
+            br
+            .box.box-solid
+              .box-header.with-border
+                h5.box-title Skills
+              .box-body
+                // the events
+                #external-events
+              // /.box-body
+            // /. box
+      .modal-footer
+        button.btn.btn-default.pull-left(type='button', data-dismiss='modal') Close
+        button.btn.btn-primary(type='button') Save
+    // /.modal-content
+  // /.modal-dialog
+// /.modal
