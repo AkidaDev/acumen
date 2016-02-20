@@ -19,7 +19,7 @@ module.exports = {
 			else{
 				User.update(req.session.me, {
 		 // Generate a unique URL where the avatar can be downloaded.
-		 avatarUrl: require('util').format('%s/user/avatar/%s', sails.getBaseUrl(),req.user.username+'_'+config.user.avatar.width+'X'+config.user.avatar.height),
+		 avatarUrl: require('util').format('%s/user/avatar/%s', sails.getBaseUrl(),req.user.username+'_'+sails.acumen.avatar_width+'X'+sails.acumen.avatar_height),
 
 		 // Grab the first file and use it's `fd` (file descriptor)
 		 avatarFd: uploadedFiles[0].fd

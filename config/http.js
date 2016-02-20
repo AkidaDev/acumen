@@ -60,15 +60,15 @@ module.exports.http = {
         });
       });
       Promise.all([p1]).then(function(values) {
-        console.log(values[0].configs);
         var configs = "{";
-        for(let val of values[0].configs )
+        for(var val of values[0].configs )
         {
-          console.log(element);
-          config += "{"+val.meta_name+':'+val.meta_desc+"}";
+          if(configs.length !==1)
+          configs += ","
+          configs += '"'+val.meta_name+'":"'+val.meta_desc+'"';
         }
-        config += '}';
-        console.log(config);
+        configs += '}';
+       sails.acumen = JSON.parse(configs);
         next();
       }).catch(function(reasons) {
         console.log(Date.getTime() + ":logging acument load errors");
@@ -90,6 +90,5 @@ module.exports.http = {
      * since that's the only time Express will cache flat-files.                *
      *                                                                          *
      ***************************************************************************/
-
   //cache: 31557600000
 };

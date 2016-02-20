@@ -44,5 +44,9 @@
     "url": "git://github.com/anonymous node/sails user/acumen.git"
   },
   "author": "anonymous node/sails user",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "sails-hook-babel": "^6.0.1"
+  }
 }

@@ -20,6 +20,8 @@ module.exports.globals = {
 
 	// _: true,
 
+  acumen: {},
+
   /****************************************************************************
   *                                                                           *
   * Expose the async installed in Sails core as a global variable. If this is *

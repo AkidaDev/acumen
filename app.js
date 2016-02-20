@@ -1,4 +1,4 @@
-"use strict;"
+"use strict";
 /**
  * app.js
  *
@@ -24,6 +24,7 @@
 process.chdir(__dirname);
 
 // Ensure a "sails" can be located:
+var acumen = {};
 (function() {
   var sails;
   try {
