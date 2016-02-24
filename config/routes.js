@@ -60,6 +60,7 @@ module.exports.routes={
 
   '/manage/contacts':"ContactController.index",
   '/manage/contacts/add':"ContactController.add",
+  '/manage/contacts/add/colleague':"ContactController.addcolleague",
 
   '/manage/clients':"ClientController.index",
   '/manage/clients/details':"ClientController.detail",
