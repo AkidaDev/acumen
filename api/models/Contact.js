@@ -30,8 +30,8 @@ module.exports = {
     //  if(typeof contact.phoneno === 'undefined' || typeof contact.name === 'undefined' || typeof contact.adress === 'undefined' || typeof contact.state === 'undefined' || typeof contact.city === 'undefined' || typeof contact.country === 'undefined' || typeof contact.pincode === 'undefined' )
     //    return cb('Please Check all value')
     }else{
-      if(typeof contact.acumen === 'undefined')
-      return cb(new Error('Error: not a valid user id'));
+    //  if(typeof contact.acumen === 'undefined')
+    //  return cb(new Error('not a valid user id'));
     }
     cb(null,contact);
   },

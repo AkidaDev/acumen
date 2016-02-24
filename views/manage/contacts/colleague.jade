@@ -11,17 +11,18 @@
           th Birth Date
           th(style='width: 60px') More Info 
       tbody
-        tr
-          td
-            img.pic.direct-chat-img.margin-r-5(src='/img/user3-128x128.jpg', alt='User Image')
-          td(style='vertical-align:middle') 21-Dec-2014
-          td(style='vertical-align:middle') Ray Tyller
-          td(style='vertical-align:middle') 8447718589
-          td(style='vertical-align:middle') Ray@botsolve.com
-          td(style='vertical-align:middle') 02-May-1993
-          td(style='vertical-align:middle; text-align:center')
-            button(onclick="window.location.href='#'").btn.btn-default.btn-sm
-              i.fa.fa-folder-open
-              |  View
+        each colleague in colleagues
+          tr
+            td
+              img.pic.direct-chat-img.margin-r-5(src='#{colleague.aimg}', alt='User Image')
+            td(style='vertical-align:middle')= colleague.joined
+            td(style='vertical-align:middle')= colleague.fname+' '+colleague.lname
+            td(style='vertical-align:middle')= colleague.phoneno
+            td(style='vertical-align:middle')= colleague.email
+            td(style='vertical-align:middle') delete me
+            td(style='vertical-align:middle; text-align:center')
+              button(onclick="window.location.href='#'").btn.btn-default.btn-sm
+                i.fa.fa-folder-open
+                |  View
   // /.box-body
 // /.box
