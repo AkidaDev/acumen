@@ -11,17 +11,18 @@
           th Email Id
           th(style='width: 60px') More Info 
       tbody
-        tr
-          td
-            img.pic.direct-chat-img.margin-r-5(src='/img/user4-128x128.jpg', alt='User Image')
-          td(style='vertical-align:middle') 21-Dec-2014
-          td(style='vertical-align:middle') Norman Green
-          td(style='vertical-align:middle') AnimeHike Pvt. Ltd.
-          td(style='vertical-align:middle') 8447718589
-          td(style='vertical-align:middle') Norman@animehike.com
-          td(style='vertical-align:middle; text-align:center')
-            button(onclick="window.location.href='#'").btn.btn-default.btn-sm
-              i.fa.fa-folder-open
-              |  View
+      each cont in contacts
+          tr
+            td
+              img.pic.direct-chat-img.margin-r-5(src='#{cont.aimg}' , alt='User Image')
+            td(style='vertical-align:middle') 21-Dec-2014
+            td(style='vertical-align:middle')= cont.fname+' '+cont.lname
+            td(style='vertical-align:middle')= cont.company
+            td(style='vertical-align:middle')= cont.phoneno
+            td(style='vertical-align:middle')= cont.email
+            td(style='vertical-align:middle; text-align:center')
+              button(onclick="window.location.href='#'").btn.btn-default.btn-sm
+                i.fa.fa-folder-open
+                |  View
   // /.box-body
 // /.box

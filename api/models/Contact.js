@@ -6,25 +6,29 @@
  */
 
 module.exports = {
-
+  connection: "localMongodb",
   attributes: {
-    udi: {type:"string" , required: true},
-    type:{ type:"string" , requied: true},
+  //  uid: {type:"string" , required: true},
+    type:{ type:"string" , required: true},
     acumenuid:{type:"string"},
     phoneno:{type:"string"},
-    name:{type:"string"},
-    adress:{type:"string"},
+    email:{type:"string"},
+    fname:{type:"string"},
+    lname:{type:"string"},
+    address:{type:"string"},
     state:{type:"string"},
     city:{type:"string"},
     country:{type:"string"},
     pincode:{type:"string"},
     company:{type:"string"},
+    aimage:{type:"string"},
+    detail:{type:"string"},
   },
   beforeCreate: function (contact,cb) {
     if(contact.type !== "acumen")
     {
-      if(typeof contact.phoneno === 'undefined' || typeof contact.name === 'undefined' || typeof contact.adress === 'undefined' || typeof contact.state === 'undefined' || typeof contact.city === 'undefined' || typeof contact.country === 'undefined' || typeof contact.pincode === 'undefined' )
-        return cb(new Error('Please Check all values'))
+    //  if(typeof contact.phoneno === 'undefined' || typeof contact.name === 'undefined' || typeof contact.adress === 'undefined' || typeof contact.state === 'undefined' || typeof contact.city === 'undefined' || typeof contact.country === 'undefined' || typeof contact.pincode === 'undefined' )
+    //    return cb('Please Check all value')
     }else{
       if(typeof contact.acumen === 'undefined')
       return cb(new Error('Error: not a valid user id'));

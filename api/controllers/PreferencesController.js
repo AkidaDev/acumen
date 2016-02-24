@@ -19,10 +19,17 @@ module.exports = {
    if(! req.body)
     return res.send(403)
 
-    // IMAGE CODE
+User.update(req.session.me, {
+// Generate a unique URL where the avatar can be downloaded.
+// IMAGE CODE
 //    avatarUrl: require('util').format('%s/user/avatar/%s', sails.getBaseUrl(),req.user.username+'_'+sails.acumen.avatar_width+'X'+sails.acumen.avatar_height),
-    // Grab the first file and use it's `fd` (file descriptor)
+// Grab the first file and use it's `fd` (file descriptor)
 //    avatarFd: uploadedFiles[0].fd
+})
+.exec(function (err){
+if (err) return res.negotiate(err);
+return res.ok();
+});
 
  }
 };
