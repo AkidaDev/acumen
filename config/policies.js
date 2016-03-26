@@ -48,14 +48,14 @@ module.exports.policies = {
 		// before letting any users feed our rabbits
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
-  '*': [
-        passport.initialize(),
-        // Use Passport's built-in sessions
-        passport.session(),
-        'isLoggedIn'
-  ],
-  PanelController: {
-    'login' : [ passport.initialize(),passport.session()],
-  }
+  // '*': [
+  //       passport.initialize(),
+  //       // Use Passport's built-in sessions
+  //       passport.session(),
+  //       'isLoggedIn'
+  // ],
+  //PanelController: {
+  //   'login' : [ passport.initialize(),passport.session()],
+  // }
 
 };
