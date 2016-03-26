@@ -32,6 +32,7 @@ module.exports.routes={
 **
 ***************************************************************************/
 
+  '/chat':{view:'chat'},
   '/':{view:'dashboard'},
   '/calendar':{view:'calendar'},
   '/logout':{view:'site/logout'},
@@ -51,9 +52,8 @@ module.exports.routes={
   '/administrator/swot': {view:'administrator/swot'},
   '/administrator/timeline': {view:'administrator/timeline'},
   '/administrator/skillset': {view:'administrator/skillset'},
-  'get /chat/subscribe/:roomid': "ChatController.subscribe",
-  'post /chat/:roomid': "ChatController.test",
-
+  //'get /chat/subscribe/:roomid': "ChatController.subscribe",
+  //'post /chat/:roomid': "ChatController.test",
   '/manage/users': "UserController.index",
   '/manage/users/details':"UserController.detail",
   '/manage/users/add':"UserController.add",
