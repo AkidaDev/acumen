@@ -1,0 +1,79 @@
+// DIRECT CHAT PRIMARY
+.box.box-solid.box-info.direct-chat.direct-chat-primary
+  .box-header.with-border
+    h3.box-title Chat Group name
+    .box-tools.pull-right
+      span.badge.bg-light-blue(data-toggle='tooltip', title='3 New Messages') 3
+      button.btn.btn-box-tool(data-widget='collapse')
+        i.fa.fa-minus
+      button.btn.btn-box-tool.dropdown-toggle(type='button', data-toggle='dropdown')
+        span.fa.fa-gear
+      ul.dropdown-menu
+        li
+          a(href='#', style='color:gray', data-widget='chat-pane-toggle') Participants
+        li
+          a(href='#', style='color:gray') Add Member
+        li
+          a(href='#', style='color:gray') Notifications
+        li.divider
+        li
+          a(href='#', style='color:gray') Group Info 
+      button.btn.btn-box-tool(data-widget='remove')
+        i.fa.fa-times
+  // /.box-header
+  .box-body
+    // Conversations are loaded here
+    .direct-chat-messages
+      // Message. Default to the left
+      .direct-chat-msg
+        .direct-chat-info.clearfix
+          span.direct-chat-name.pull-left Alexander Pierce
+          span.direct-chat-timestamp.pull-right 23 Jan 2:00 pm
+        // /.direct-chat-info
+        img.direct-chat-img(src='/img/user1-128x128.jpg', alt='message user image')
+        // /.direct-chat-img
+        .direct-chat-text
+          | Is this template really for free? That's unbelievable!
+        // /.direct-chat-text
+      // /.direct-chat-msg
+      // Message to the right
+      .direct-chat-msg.right
+        .direct-chat-info.clearfix
+          span.direct-chat-name.pull-right Sarah Bullock
+          span.direct-chat-timestamp.pull-left 23 Jan 2:05 pm
+        // /.direct-chat-info
+        img.direct-chat-img(src='/img/user3-128x128.jpg', alt='message user image')
+        // /.direct-chat-img
+        .direct-chat-text
+          | You better believe it!
+        // /.direct-chat-text
+      // /.direct-chat-msg
+    // /.direct-chat-messages
+    // Contacts are loaded here
+    .direct-chat-contacts
+      ul.contacts-list
+        li
+          button.btn.btn-default.btn-xs.pull-right(type='button', data-widget='chat-pane-toggle')
+            i.fa.fa-arrow-circle-right
+            |  Back
+        li
+          a(href='#')
+            img.contacts-list-img(src='/img/user1-128x128.jpg')
+            .contacts-list-info
+              span.contacts-list-name
+                | Count Dracula
+                small.contacts-list-date.pull-right 2/28/2015
+              span.contacts-list-msg How have you been? I was...
+            // /.contacts-list-info
+        // End Contact Item
+      // /.contatcts-list
+    // /.direct-chat-pane
+  // /.box-body
+  .box-footer
+    form(action='#', method='post')
+      .input-group
+        input.form-control(type='text', name='message', placeholder='Type Message ...')
+        span.input-group-btn
+          button.btn.btn-primary.btn-flat(type='button') Send
+  // /.box-footer
+// /.direct-chat

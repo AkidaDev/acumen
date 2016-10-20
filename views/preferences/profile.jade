@@ -1,0 +1,106 @@
+.box-header.with-border
+  h3.box-title Account
+// /.box-header
+.row.row-centered
+  br 
+  .col-md-3.col-centered(style='vertical-align: middle')
+    .box-body.box-profile
+      if( typeof(username) !== 'undefined')
+        img.profile-user-img.img-responsive.img-circle(src= "#{user.pimg}"  alt='User profile picture23')
+      else
+        img.profile-user-img.img-responsive.img-circle(src='/img/default-50x50.gif' alt='User profile picture')
+      h3.profile-username.text-center Nina Mcintire
+    .row.row-centered
+      .input-group
+        span.input-group-btn
+          span.btn.btn-primary.btn-file
+            | Browse… 
+            input(type='file', accept='image/*')
+        input.form-control(type='text', readonly='')
+      span.help-block
+        | Profile Img "Define the image size"
+      hr
+      .description-block
+        h5.description-header Nina@companyname.com 
+        // <user>@<companyname>.<tdl>
+        a(href='#') change password
+      // /.description-block
+    // /.col
+  .col-xs-6.col-centered(style='vertical-align: middle')
+    form.form-horizontal
+      .box-body
+        .form-group
+          label.col-sm-2.control-label(for='inputFirstName') Name
+          .col-sm-5
+            input#inputName.form-control(type='text', placeholder='First'  value="#{user.fname}")
+          .col-sm-5
+            input#inputName.form-control(type='text', placeholder='Last' value= "#{user.lname}")
+        .form-group
+          label.col-sm-2.control-label(for='inputEmail') Email
+          .col-sm-10
+            input#inputEmail.form-control(type='email', placeholder='Email Id' value='#{user.email}')
+            // TODO: get data from the server for city state country. using user preferences
+        .form-group
+          label.col-sm-2.control-label(for='inputState') State
+          .col-sm-4
+            select.form-control.select2(style='width: 100%;')
+              option Alaska
+              option California
+              option Delaware
+              option Tennessee
+              option Texas
+              option Washington
+          label.col-sm-2.control-label(for='inputCity') City
+          .col-sm-4
+            select.form-control.select2(style='width: 100%;')
+              option Alabama
+              option Alaska
+              option California
+              option Delaware
+              option Tennessee
+              option Texas
+              option Washington
+        // phone mask
+        .form-group
+          label.col-sm-2.control-label(for='inputContact') Contact
+          .col-sm-4
+            .input-group
+              .input-group-addon
+                i.fa.fa-phone
+              input.form-control(type='text', data-inputmask='"mask": "(999) 999-9999"', data-mask='' value!= typeof userdata ==="undefined" ? "" : user.phoneno)
+          // /.input group
+          label.col-sm-2.control-label(for='inputDOB') Birth Date
+          .col-sm-4
+            .input-group
+              .input-group-addon
+                i.fa.fa-calendar
+              input.form-control(type='text', data-inputmask="'alias': 'dd/mm/yyyy'", data-mask='' value!= typeof userdata ==="undefined" ? "" : user.dob )
+            // /.input group
+          // /.form group
+        // /.form group
+        .form-group
+          label.col-sm-2.control-label(for='inputExperience') Experience
+          .col-sm-10
+            textarea#inputExperience.form-control(placeholder='Experience' value!= typeof userdata ==="undefined" ? "" : user.experience)
+        .form-group
+          label.col-sm-2.control-label(for='inputSkills') Skills
+          .col-sm-10
+            select.form-control.select2(multiple='multiple', data-placeholder='Select Skills Set', style='width: 100%;')
+              option Marketing
+              option Resourcing
+              option Speech Giving
+              option Coding
+              option Exploring
+              option Designing
+              option Debuging
+        .form-group
+          .col-sm-offset-2.col-sm-10
+            .checkbox
+              label
+                input(type='checkbox')
+                |  I agree to the 
+                a(href='#') terms and conditions
+        .form-group
+          .col-sm-offset-2.col-sm-10
+            br
+            button.btn.btn-primary(type='submit') Submit

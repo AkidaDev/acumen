@@ -1,0 +1,42 @@
+extends ./../layouts/main.jade
+block content-body
+  // Content Wrapper. Contains page content
+  .content-wrapper
+    // Content Header (Page header)
+    section.content-header
+      h1
+        | Calendar
+        small Control panel
+      ol.breadcrumb
+        li
+          a(href='/')
+            i.fa.fa-dashboard
+            |  Home
+        li.active Calendar
+    // Main content
+    section.content
+        form(role='form' method="post")
+          .form-group
+            label(for='title') Task:
+            .form-control
+              input(type="text" name='Task[title]')
+          .form-group
+            label(for='pwd') Description
+            .inputform-control
+              input(type="text" name='Task[Description]')
+          .form-group
+            label(for="assignto")
+            select()
+              option 1
+              option 2
+              option 3
+          .form-group
+            label(for="notify")
+            select()
+              option 1
+              option 2
+              option 3
+            
+          button.btn.btn-default(type='submit') Submit
+
+        

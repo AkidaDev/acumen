@@ -1,0 +1,303 @@
+extends ./../layouts/main.jade
+block append mainhead
+  // iCheck 
+  link(rel='stylesheet', href='/plugins/iCheck/flat/blue.css')
+block content-body
+  // Content Wrapper. Contains page content
+  .content-wrapper
+    // Content Header (Page header)
+    section.content-header
+      h1
+        | Mailbox
+        small 13 new messages
+      ol.breadcrumb
+        li
+          a(href='/')
+            i.fa.fa-dashboard
+            |  Home
+        li.active Mailbox
+    // Main content
+    section.content
+      .row
+        .col-md-3
+          a.btn.btn-primary.btn-block.margin-bottom(href='/mailbox/compose') Compose
+          include ./toolbox.jade
+        // /.col
+        .col-md-9
+          .box.box-primary
+            .box-header.with-border
+              h3.box-title Inbox
+              .box-tools.pull-right
+                .has-feedback
+                  input.form-control.input-sm(type='text', placeholder='Search Mail')
+                  span.fa.fa-search.form-control-feedback
+              // /.box-tools
+            // /.box-header
+            .box-body.no-padding
+              .mailbox-controls
+                // Check all button
+                button.btn.btn-default.btn-sm.checkbox-toggle
+                  i.fa.fa-square-o
+                .btn-group
+                  button.btn.btn-default.btn-sm
+                    i.fa.fa-trash-o
+                  button.btn.btn-default.btn-sm
+                    i.fa.fa-reply
+                  button.btn.btn-default.btn-sm
+                    i.fa.fa-share
+                // /.btn-group
+                button.btn.btn-default.btn-sm
+                  i.fa.fa-refresh
+                .pull-right
+                  | 1-50/200
+                  .btn-group
+                    button.btn.btn-default.btn-sm
+                      i.fa.fa-chevron-left
+                    button.btn.btn-default.btn-sm
+                      i.fa.fa-chevron-right
+                  // /.btn-group
+                // /.pull-right
+              .table-responsive.mailbox-messages
+                table.table.table-hover.table-striped
+                  tbody
+                    tr
+                      td
+                        input(type='checkbox')
+                      td.mailbox-star
+                        a(href='#')
+                          i.fa.fa-star.text-yellow
+                      td.mailbox-name
+                        a(href='/mailbox/read') Alexander Pierce
+                      td.mailbox-subject
+                        b AdminLTE 2.0 Issue
+                        |  - Trying to find a solution to this problem...
+                      td.mailbox-attachment
+                      td.mailbox-date 5 mins ago
+                    tr
+                      td
+                        input(type='checkbox')
+                      td.mailbox-star
+                        a(href='#')
+                          i.fa.fa-star-o.text-yellow
+                      td.mailbox-name
+                        a(href='/mailbox/read') Alexander Pierce
+                      td.mailbox-subject
+                        b AdminLTE 2.0 Issue
+                        |  - Trying to find a solution to this problem...
+                      td.mailbox-attachment
+                        i.fa.fa-paperclip
+                      td.mailbox-date 28 mins ago
+                    tr
+                      td
+                        input(type='checkbox')
+                      td.mailbox-star
+                        a(href='#')
+                          i.fa.fa-star-o.text-yellow
+                      td.mailbox-name
+                        a(href='/mailbox/read') Alexander Pierce
+                      td.mailbox-subject
+                        b AdminLTE 2.0 Issue
+                        |  - Trying to find a solution to this problem...
+                      td.mailbox-attachment
+                        i.fa.fa-paperclip
+                      td.mailbox-date 11 hours ago
+                    tr
+                      td
+                        input(type='checkbox')
+                      td.mailbox-star
+                        a(href='#')
+                          i.fa.fa-star.text-yellow
+                      td.mailbox-name
+                        a(href='/mailbox/read') Alexander Pierce
+                      td.mailbox-subject
+                        b AdminLTE 2.0 Issue
+                        |  - Trying to find a solution to this problem...
+                      td.mailbox-attachment
+                      td.mailbox-date 15 hours ago
+                    tr
+                      td
+                        input(type='checkbox')
+                      td.mailbox-star
+                        a(href='#')
+                          i.fa.fa-star.text-yellow
+                      td.mailbox-name
+                        a(href='/mailbox/read') Alexander Pierce
+                      td.mailbox-subject
+                        b AdminLTE 2.0 Issue
+                        |  - Trying to find a solution to this problem...
+                      td.mailbox-attachment
+                        i.fa.fa-paperclip
+                      td.mailbox-date Yesterday
+                    tr
+                      td
+                        input(type='checkbox')
+                      td.mailbox-star
+                        a(href='#')
+                          i.fa.fa-star-o.text-yellow
+                      td.mailbox-name
+                        a(href='/mailbox/read') Alexander Pierce
+                      td.mailbox-subject
+                        b AdminLTE 2.0 Issue
+                        |  - Trying to find a solution to this problem...
+                      td.mailbox-attachment
+                        i.fa.fa-paperclip
+                      td.mailbox-date 2 days ago
+                    tr
+                      td
+                        input(type='checkbox')
+                      td.mailbox-star
+                        a(href='#')
+                          i.fa.fa-star-o.text-yellow
+                      td.mailbox-name
+                        a(href='/mailbox/read') Alexander Pierce
+                      td.mailbox-subject
+                        b AdminLTE 2.0 Issue
+                        |  - Trying to find a solution to this problem...
+                      td.mailbox-attachment
+                        i.fa.fa-paperclip
+                      td.mailbox-date 2 days ago
+                    tr
+                      td
+                        input(type='checkbox')
+                      td.mailbox-star
+                        a(href='#')
+                          i.fa.fa-star.text-yellow
+                      td.mailbox-name
+                        a(href='/mailbox/read') Alexander Pierce
+                      td.mailbox-subject
+                        b AdminLTE 2.0 Issue
+                        |  - Trying to find a solution to this problem...
+                      td.mailbox-attachment
+                      td.mailbox-date 2 days ago
+                    tr
+                      td
+                        input(type='checkbox')
+                      td.mailbox-star
+                        a(href='#')
+                          i.fa.fa-star.text-yellow
+                      td.mailbox-name
+                        a(href='/mailbox/read') Alexander Pierce
+                      td.mailbox-subject
+                        b AdminLTE 2.0 Issue
+                        |  - Trying to find a solution to this problem...
+                      td.mailbox-attachment
+                      td.mailbox-date 2 days ago
+                    tr
+                      td
+                        input(type='checkbox')
+                      td.mailbox-star
+                        a(href='#')
+                          i.fa.fa-star-o.text-yellow
+                      td.mailbox-name
+                        a(href='/mailbox/read') Alexander Pierce
+                      td.mailbox-subject
+                        b AdminLTE 2.0 Issue
+                        |  - Trying to find a solution to this problem...
+                      td.mailbox-attachment
+                      td.mailbox-date 2 days ago
+                    tr
+                      td
+                        input(type='checkbox')
+                      td.mailbox-star
+                        a(href='#')
+                          i.fa.fa-star-o.text-yellow
+                      td.mailbox-name
+                        a(href='/mailbox/read') Alexander Pierce
+                      td.mailbox-subject
+                        b AdminLTE 2.0 Issue
+                        |  - Trying to find a solution to this problem...
+                      td.mailbox-attachment
+                        i.fa.fa-paperclip
+                      td.mailbox-date 4 days ago
+                    tr
+                      td
+                        input(type='checkbox')
+                      td.mailbox-star
+                        a(href='#')
+                          i.fa.fa-star.text-yellow
+                      td.mailbox-name
+                        a(href='/mailbox/read') Alexander Pierce
+                      td.mailbox-subject
+                        b AdminLTE 2.0 Issue
+                        |  - Trying to find a solution to this problem...
+                      td.mailbox-attachment
+                      td.mailbox-date 12 days ago
+                    tr
+                      td
+                        input(type='checkbox')
+                      td.mailbox-star
+                        a(href='#')
+                          i.fa.fa-star-o.text-yellow
+                      td.mailbox-name
+                        a(href='/mailbox/read') Alexander Pierce
+                      td.mailbox-subject
+                        b AdminLTE 2.0 Issue
+                        |  - Trying to find a solution to this problem...
+                      td.mailbox-attachment
+                        i.fa.fa-paperclip
+                      td.mailbox-date 12 days ago
+                    tr
+                      td
+                        input(type='checkbox')
+                      td.mailbox-star
+                        a(href='#')
+                          i.fa.fa-star.text-yellow
+                      td.mailbox-name
+                        a(href='/mailbox/read') Alexander Pierce
+                      td.mailbox-subject
+                        b AdminLTE 2.0 Issue
+                        |  - Trying to find a solution to this problem...
+                      td.mailbox-attachment
+                        i.fa.fa-paperclip
+                      td.mailbox-date 14 days ago
+                    tr
+                      td
+                        input(type='checkbox')
+                      td.mailbox-star
+                        a(href='#')
+                          i.fa.fa-star.text-yellow
+                      td.mailbox-name
+                        a(href='/mailbox/read') Alexander Pierce
+                      td.mailbox-subject
+                        b AdminLTE 2.0 Issue
+                        |  - Trying to find a solution to this problem...
+                      td.mailbox-attachment
+                        i.fa.fa-paperclip
+                      td.mailbox-date 15 days ago
+                // /.table
+              // /.mail-box-messages
+            // /.box-body
+            .box-footer.no-padding
+              .mailbox-controls
+                // Check all button
+                button.btn.btn-default.btn-sm.checkbox-toggle
+                  i.fa.fa-square-o
+                .btn-group
+                  button.btn.btn-default.btn-sm
+                    i.fa.fa-trash-o
+                  button.btn.btn-default.btn-sm
+                    i.fa.fa-reply
+                  button.btn.btn-default.btn-sm
+                    i.fa.fa-share
+                // /.btn-group
+                button.btn.btn-default.btn-sm
+                  i.fa.fa-refresh
+                .pull-right
+                  | 1-50/200
+                  .btn-group
+                    button.btn.btn-default.btn-sm
+                      i.fa.fa-chevron-left
+                    button.btn.btn-default.btn-sm
+                      i.fa.fa-chevron-right
+                  // /.btn-group
+                // /.pull-right
+          // /. box
+        // /.col
+      // /.row
+    // /.content
+  // /.content-wrapper
+block append bootscript
+  // iCheck 
+  script(src='/plugins/iCheck/icheck.min.js')
+  // icheck click all event
+  script(src='/js/icheck-click.js')

@@ -1,0 +1,11 @@
+// this is test file for testing and debuing 
+
+extends ./../layouts/plain
+// current testing chat system for user
+block prepend content-body
+    .createroombox
+      form#createroomform
+        input(type="text" id="roomname" name="Room[roomname]" )
+        input(type="radio" name="Room[private]" value="true")
+        input(type="radio" name="Room[private]" value="False")
+        button#createroom.btn.btn-default(type="button") Create Room #[.fa.fa-comment]

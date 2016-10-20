@@ -18,6 +18,10 @@ type Project struct {
 	UpdatedAt   time.Time `orm:"column(updated_at);type(timestamp);auto_now"`
 }
 
+func (t *Project) TableName() string {
+	return "abc_anm_desc"
+}
+
 func init() {
 	orm.RegisterModel(new(Project))
 }

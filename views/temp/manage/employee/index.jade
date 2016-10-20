@@ -1,0 +1,39 @@
+extends ./../../layouts/main
+block append mainhead
+  // DataTables
+  link(rel='stylesheet', href='/plugins/datatables/dataTables.bootstrap.css')
+block content-body
+  // Content Wrapper. Contains page content
+  .content-wrapper
+    // Content Header (Page header)
+    section.content-header
+      h1
+        | Manage 
+        small Control panel
+      ol.breadcrumb
+        li
+          a(href='/')
+            i.fa.fa-dashboard
+            |  Home
+        li.active Users
+    // Main content
+    section.content
+      // Your Page Content Here
+      .nav-tabs-custom
+        ul.nav.nav-tabs
+          li.active
+            a(href='#tab_1', data-toggle='tab') Employees
+          li.pull-right
+            button(onclick="window.location.href='/manage/users/add'").btn.bg-teal
+              i.margin-r-5.fa.fa-plus-circle 
+              |  New
+        .tab-content
+          #tab_1.tab-pane.active
+            include ./employee.jade
+          // /.content-wrapper
+block append bootscript
+  // Datatable 
+  script(src='/plugins/datatables/jquery.dataTables.min.js')
+  script(src='/plugins/datatables/dataTables.bootstrap.min.js')
+  // data table properties
+  script(src='/js/datatable.js')

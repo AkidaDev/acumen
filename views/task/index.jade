@@ -1,0 +1,18 @@
+extends ./../layouts/main.jade
+block content-body
+  // Content Wrapper. Contains page content
+  .content-wrapper
+    // Content Header (Page header)
+    section.content-header
+      h1
+        | Calendar
+        small Control panel
+      ol.breadcrumb
+        li
+          a(href='/')
+            i.fa.fa-dashboard
+            |  Home
+        li.active Calendar
+    // Main content
+    section.content
+      a.btn.bg.teal(href="/task/create") Creat new task

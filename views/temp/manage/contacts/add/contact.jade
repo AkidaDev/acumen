@@ -1,0 +1,54 @@
+.box-header.with-border
+  h3.box-title Details
+  // /.box-header
+.box-body  
+  form.form-horizontal(action="/manage/contacts/add" method="post")
+    .row.row-centered
+      br
+      .col-md-3.col-centered(style='vertical-align: middle')
+        .box-body.box-profile
+          img.profile-user-img.img-responsive.img-circle(src='/img/default-50x50.gif', alt='User profile picture')
+          h3.profile-username.text-center Nina Mcintire
+        .row.row-centered
+          .input-group
+            span.input-group-btn
+              span.btn.btn-primary.btn-file
+                | Browse… 
+                input(type='file', accept='image/*')
+            input.form-control(type='text', readonly='')
+          span.help-block
+            | feedback "Define the image size"
+          // /.description-block
+        // /.col
+      .col-xs-6.col-centered(style='vertical-align: middle')
+          .box-body
+            .form-group
+              label.col-sm-2.control-label(for='inputFirstName') Name
+              .col-sm-5
+                input#inputFirstName.form-control(type='text', placeholder='First' name="Contact[fname]")
+              .col-sm-5
+                input#inputName.form-control(type='text', placeholder='Last' name="Contact[lname]")
+            .form-group
+              label.col-sm-2.control-label(for='inputEmail') Email
+              .col-sm-10
+                input#inputEmail.form-control(type='email', placeholder='Email Id' name="Contact[email]")
+            .form-group    
+              label.col-sm-2.control-label(for='Address') Address
+              .col-sm-10
+                input#FirmAddress.form-control(type='text', placeholder='Address' name="Contact[address]")
+              label.col-sm-2.control-label(for='inputContact') Contact
+              .col-sm-4
+                .input-group
+                  .input-group-addon
+                    i.fa.fa-phone
+                  input.form-control(type='text', data-inputmask='"mask": "(999) 999-9999"', data-mask='' name="Contact[number]")
+                // /.form group
+            // /.form group
+            .form-group
+              label.col-sm-2.control-label(for='inputExtraNotes') Notes
+              .col-sm-10
+                textarea#inputExtraNotes.form-control(placeholder='Details' name="Contact[detail]")
+    button.btn.btn-default(type='submit') Cancel
+    button.btn.btn-primary.pull-right(type='submit') Save
+          // /.box-footer
+          // /.box
