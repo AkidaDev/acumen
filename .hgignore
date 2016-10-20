@@ -1,5 +1,3 @@
 syntax: glob
-tobacco/public/system/**/*
-publishing/public/system/**/*
-acumen/**/*
-.fuse-hie*
+.git/**/*
+acumen
